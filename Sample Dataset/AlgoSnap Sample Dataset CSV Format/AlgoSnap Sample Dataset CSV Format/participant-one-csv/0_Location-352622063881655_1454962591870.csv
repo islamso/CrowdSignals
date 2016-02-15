@@ -1,0 +1,10 @@
+sensor_type, device_type, timestamps, latitude, longitude, speed, 
+location,smartphone,1454962551871000000,47.543,-122.018,0.000
+location,smartphone,1454962588818,47.543,-122.019,0.000
+location,smartphone,1454962600254,47.543,-122.018,0.000
+location,smartphone,1454962629026,47.543,-122.018,0.000
+location,smartphone,1454962611901000000,47.543,-122.018,0.000
+location,smartphone,1454962631953000000,47.543,-122.018,0.000
+location,smartphone,1454962643885,47.543,-122.018,0.000
+location,smartphone,1454962668603,47.543,-122.019,0.000
+location,smartphone,1454962683444,47.541,-122.015,0.000

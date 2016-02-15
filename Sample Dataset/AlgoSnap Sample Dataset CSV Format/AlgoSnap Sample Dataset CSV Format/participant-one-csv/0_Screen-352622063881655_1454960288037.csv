@@ -1,0 +1,3 @@
+sensor_type, device_type, timestamps, status, 
+screen,smartphone,1454960288035000000,SCREEN_ON
+screen,smartphone,1454960314451000000,SCREEN_OFF

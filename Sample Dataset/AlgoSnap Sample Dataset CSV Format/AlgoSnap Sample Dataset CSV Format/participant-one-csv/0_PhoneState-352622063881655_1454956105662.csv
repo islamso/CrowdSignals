@@ -1,0 +1,7 @@
+sensor_type, device_type, timestamps, data, 
+phonestate,smartphone,1454956105661000000,STATE_IN_SERVICE
+phonestate,smartphone,1454956105669000000,[37127,107884554,0]
+phonestate,smartphone,1454956105673000000,CALL_STATE_IDLE
+phonestate,smartphone,1454956105673000000,N/A
+phonestate,smartphone,1454956105673000000,N/A
+phonestate,smartphone,1454956105673000000,DATA_ACTIVITY_NONE

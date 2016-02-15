@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, distance, 
+proximity,smartphone,1454956896440826406,0.000
+proximity,smartphone,1454957090272093177,8.000
+proximity,smartphone,1454957172890459896,0.000

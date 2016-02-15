@@ -1,0 +1,2 @@
+sensor_type, device_type, label, label_start, label_start_datetime,label_end, label_end_datetime,
+interval_label,smartphone,Driving,1454958881535000064.000,08/02/2016 11:14:41,1454959104660000000.000,08/02/2016 11:18:24
