@@ -1,0 +1,7 @@
+sensor_type, device_type, timestamps, name, address, rssi, 
+bluetooth,smartphone,1454959578508000000,MacBook Pro,C8:BC:C8:B3:9F:7B,-91.000
+bluetooth,smartphone,1454959581808000000,null,40:83:DE:12:60:4C,-88.000
+bluetooth,smartphone,1454959581898000000,null,40:83:DE:38:8B:88,-98.000
+bluetooth,smartphone,1454959584806000000,null,40:83:DE:12:48:D4,-90.000
+bluetooth,smartphone,1454959587209000000,null,40:83:DE:78:42:54,-94.000
+bluetooth,smartphone,1454959699321000000,null,40:83:DE:38:1B:2F,-96.000

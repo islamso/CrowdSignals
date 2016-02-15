@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, name, address, rssi, 
+bluetooth,smartphone,1454962823161000000,null,74:5E:1C:91:8C:AE,-104.000
+bluetooth,smartphone,1454962823638000000,null,00:0E:9F:61:9C:4E,-102.000
+bluetooth,smartphone,1454962823869000000,iPhone,5A:93:4E:AF:17:B5,-107.000

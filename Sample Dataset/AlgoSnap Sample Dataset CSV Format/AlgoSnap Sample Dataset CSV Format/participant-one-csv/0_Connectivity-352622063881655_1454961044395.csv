@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, connected, connecting, available, network_type, roaming, ssid, 
+connectivity,smartphone,1454961044394000000,1.000,1.000,1.000,MOBILE_CONNECTION,NOT_ROAMING,0x
+connectivity,smartphone,1454961050172000000,1.000,1.000,1.000,MOBILE_CONNECTION,NOT_ROAMING,0x
+connectivity,smartphone,1454961050238000000,1.000,1.000,1.000,MOBILE_CONNECTION,NOT_ROAMING,0x

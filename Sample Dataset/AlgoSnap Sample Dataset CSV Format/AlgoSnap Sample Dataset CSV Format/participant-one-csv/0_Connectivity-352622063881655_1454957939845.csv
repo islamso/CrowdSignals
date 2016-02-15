@@ -1,0 +1,7 @@
+sensor_type, device_type, timestamps, connected, connecting, available, network_type, roaming, ssid, 
+connectivity,smartphone,1454957939843000000,1.000,1.000,1.000,WIFI_CONNECTION,NOT_ROAMING,"Google Starbucks"
+connectivity,smartphone,1454957951572000000,1.000,1.000,1.000,WIFI_CONNECTION,NOT_ROAMING,"Google Starbucks"
+connectivity,smartphone,1454957954362000000,1.000,1.000,1.000,WIFI_CONNECTION,NOT_ROAMING,"Google Starbucks"
+connectivity,smartphone,1454957959775000000,1.000,1.000,1.000,WIFI_CONNECTION,NOT_ROAMING,"Google Starbucks"
+connectivity,smartphone,1454958032094000000,1.000,1.000,1.000,MOBILE_CONNECTION,NOT_ROAMING,0x
+connectivity,smartphone,1454958032376000000,1.000,1.000,1.000,MOBILE_CONNECTION,NOT_ROAMING,0x

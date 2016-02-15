@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, name, address, rssi, 
+bluetooth,smartphone,1454959816901000000,null,73:96:79:5D:3C:7C,-102.000
+bluetooth,smartphone,1454959819148000000,WindowsCE,40:83:DE:48:57:1E,-99.000
+bluetooth,smartphone,1454959939388000000,null,54:B8:E9:80:E4:1E,-100.000

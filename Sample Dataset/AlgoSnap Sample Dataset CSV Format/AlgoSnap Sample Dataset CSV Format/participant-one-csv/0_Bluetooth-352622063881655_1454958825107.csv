@@ -1,0 +1,3 @@
+sensor_type, device_type, timestamps, name, address, rssi, 
+bluetooth,smartphone,1454958740213000000,Susies-Z10,94:EB:CD:9A:BD:9F,-90.000
+bluetooth,smartphone,1454958743191000000,DEH-X6600BT  ,74:5E:1C:55:5D:4A,-103.000
