@@ -1,0 +1,7 @@
+sensor_type, device_type, timestamps, name, address, rssi, 
+bluetooth,smartphone,1454461527743000000,null,72:A7:E6:B2:91:81,-97.000
+bluetooth,smartphone,1454461533975000000,HTC One X,E8:99:C4:D5:84:33,-92.000
+bluetooth,smartphone,1454461539848000000,null,72:A7:E6:B2:91:81,-97.000
+bluetooth,smartphone,1454461540076000000,KDC-X3**        ,00:1D:86:58:C7:69,-89.000
+bluetooth,smartphone,1454461623705000000,null,72:A7:E6:B2:91:81,-97.000
+bluetooth,smartphone,1454461634464000000,null,72:A7:E6:B2:91:81,-95.000

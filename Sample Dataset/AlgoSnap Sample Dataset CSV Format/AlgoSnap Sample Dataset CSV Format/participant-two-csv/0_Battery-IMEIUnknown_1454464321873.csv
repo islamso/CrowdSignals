@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, level, 
+battery,smartwatch,1454464251004000000,50.000
+battery,smartwatch,1454464341003000000,50.000
+battery,smartwatch,1454464342345000000,49.000

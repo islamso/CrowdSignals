@@ -1,0 +1,6 @@
+sensor_type, device_type, timestamps, name, address, rssi, 
+bluetooth,smartphone,1454465238037000000,null,47:9B:CE:DB:4B:63,-86.000
+bluetooth,smartphone,1454465363201000000,null,1C:E6:2B:E6:1C:A7,-94.000
+bluetooth,smartphone,1454465367101000000,KDC-BT3**U      ,00:1D:86:5F:A6:6C,-92.000
+bluetooth,smartphone,1454465381830000000,null,1C:1A:C0:68:DD:F9,-90.000
+bluetooth,smartphone,1454465384244000000,null,1C:E6:2B:E6:1C:A7,-96.000

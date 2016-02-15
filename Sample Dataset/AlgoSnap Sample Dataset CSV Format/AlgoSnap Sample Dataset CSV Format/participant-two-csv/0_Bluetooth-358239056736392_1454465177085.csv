@@ -1,0 +1,5 @@
+sensor_type, device_type, timestamps, name, address, rssi, 
+bluetooth,smartphone,1454465090963000000,null,5A:A9:C6:02:49:15,-95.000
+bluetooth,smartphone,1454465091662000000,AUDIO_ACTIONS_US280A_BLE,00:E0:4C:1B:60:BB,-93.000
+bluetooth,smartphone,1454465093114000000,Newark-CMS-4,00:1F:F3:AC:3E:E9,-81.000
+bluetooth,smartphone,1454465100868000000,Newark-CMS-4,00:1F:F3:AC:3E:E9,-79.000

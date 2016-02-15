@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, level, 
+battery,smartphone,1454459387011000000,92.000
+battery,smartphone,1454459406632000000,91.000
+battery,smartphone,1454459477006000000,91.000
