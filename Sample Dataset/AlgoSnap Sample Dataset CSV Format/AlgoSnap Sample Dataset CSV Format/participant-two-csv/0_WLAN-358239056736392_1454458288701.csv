@@ -1,0 +1,6 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454458245067440492,ATT4w598W7,30:60:23:59:87:40,2437.000,-90.000
+wlan,smartphone,1454458245067414763,ChuchuTrain2,00:26:5a:c7:58:ae,2462.000,-93.000
+wlan,smartphone,1454458288696496581,alexanmor,00:26:f2:06:f3:84,2412.000,-92.000
+wlan,smartphone,1454458288696249082,alexanmor,00:26:f2:06:f3:84,2412.000,-92.000
+wlan,smartphone,1454458288696631113,alexanmor,00:26:f2:06:f3:84,2412.000,-92.000

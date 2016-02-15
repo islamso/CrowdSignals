@@ -1,0 +1,6 @@
+sensor_type, device_type, timestamps, data, 
+phonestate,smartphone,1454462434986000000,[56970,3908795,482]
+phonestate,smartphone,1454462435016000000,DATA_ACTIVITY_NONE
+phonestate,smartphone,1454462435018000000,DATA_ACTIVITY_NONE
+phonestate,smartphone,1454462460434000000,DATA_ACTIVITY_NONE
+phonestate,smartphone,1454462460435000000,DATA_ACTIVITY_NONE

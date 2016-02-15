@@ -1,0 +1,8 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454465928017126871,NNDS_Wifi5G,00:02:6f:e2:55:94,5180.000,-88.000
+wlan,smartphone,1454465928017080319,Alvin,60:e3:27:95:c5:bc,2442.000,-94.000
+wlan,smartphone,1454466000940548307,NNDS_Wifi5G,00:02:6f:e2:55:94,5180.000,-89.000
+wlan,smartphone,1454466008051080037,NETGEAR,00:1b:2f:d8:59:e6,2432.000,-80.000
+wlan,smartphone,1454466008051076630,NETGEAR54,c4:04:15:15:15:3d,2437.000,-90.000
+wlan,smartphone,1454466048017125853,GO1927,cc:e1:7f:11:56:c4,2412.000,-85.000
+wlan,smartphone,1454466048017119134,xfinitywifi,06:1d:d3:ba:1d:f0,2437.000,-90.000

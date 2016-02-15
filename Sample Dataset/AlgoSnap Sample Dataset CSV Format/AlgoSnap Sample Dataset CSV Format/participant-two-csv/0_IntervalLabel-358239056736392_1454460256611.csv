@@ -1,0 +1,2 @@
+sensor_type, device_type, label, label_start, label_start_datetime,label_end, label_end_datetime,
+interval_label,smartphone,Eating,1454460095731000064.000,02/02/2016 16:41:35,1454460256604999936.000,02/02/2016 16:44:16

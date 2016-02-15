@@ -1,0 +1,2 @@
+sensor_type, device_type, label, label_start, label_start_datetime,label_end, label_end_datetime,
+interval_label,smartphone,Washing Hands,1454462606144000000.000,02/02/2016 17:23:26,1454462740679000064.000,02/02/2016 17:25:40

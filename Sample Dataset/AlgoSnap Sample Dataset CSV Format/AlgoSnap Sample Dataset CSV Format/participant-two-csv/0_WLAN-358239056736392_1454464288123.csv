@@ -1,0 +1,3 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454464207904007996,Guest5175-1,50:6a:03:b2:de:4f,2457.000,-94.000
+wlan,smartphone,1454464288026569151,quickfasthurry,10:86:8c:34:6b:21,5180.000,-83.000

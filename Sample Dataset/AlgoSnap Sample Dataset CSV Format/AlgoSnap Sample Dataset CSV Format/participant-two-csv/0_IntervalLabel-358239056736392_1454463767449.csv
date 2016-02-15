@@ -1,0 +1,2 @@
+sensor_type, device_type, label, label_start, label_start_datetime,label_end, label_end_datetime,
+interval_label,smartphone,Running,1454463614580999936.000,02/02/2016 17:40:14,1454463767446000128.000,02/02/2016 17:42:47

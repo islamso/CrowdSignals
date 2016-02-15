@@ -1,0 +1,2 @@
+sensor_type, device_type, label, label_start, label_start_datetime,label_end, label_end_datetime,
+interval_label,smartphone,Sitting,1454459257105999872.000,02/02/2016 16:27:37,1454459557230000128.000,02/02/2016 16:32:37

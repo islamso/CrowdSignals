@@ -1,0 +1,2 @@
+sensor_type, device_type, label, label_start, label_start_datetime,label_end, label_end_datetime,
+interval_label,smartphone,On Table,1454459000020999936.000,02/02/2016 16:23:20,1454459182315000064.000,02/02/2016 16:26:22

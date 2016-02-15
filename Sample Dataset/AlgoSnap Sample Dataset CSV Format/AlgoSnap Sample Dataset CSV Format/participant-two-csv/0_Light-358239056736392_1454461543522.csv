@@ -1,0 +1,6 @@
+sensor_type, device_type, timestamps, lux, 
+light,smartphone,1454461496660323310,0.441
+light,smartphone,1454461496710602262,0.946
+light,smartphone,1454461496760762047,0.551
+light,smartphone,1454461496811094644,0.048
+light,smartphone,1454461496862256200,0.000

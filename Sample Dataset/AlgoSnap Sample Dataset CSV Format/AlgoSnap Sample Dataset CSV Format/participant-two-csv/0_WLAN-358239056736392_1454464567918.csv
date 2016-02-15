@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454464440851264003,cswg101,fc:0a:81:03:45:30,2462.000,-95.000
+wlan,smartphone,1454464560698535726,1424,7c:cb:0d:08:20:fb,2462.000,-86.000
+wlan,smartphone,1454464560698831372,Virginiaspain30,10:86:8c:34:6e:6e,2437.000,-93.000

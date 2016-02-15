@@ -1,0 +1,6 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454462841026508456,Cisco_33DCD695,18:59:33:dc:d6:96,5785.000,-88.000
+wlan,smartphone,1454462881445109180,ATT7A2c5s5,e0:b7:0a:6c:fd:d0,2412.000,-98.000
+wlan,smartphone,1454462955681763831,ATT4w598W7,30:60:23:59:87:40,2437.000,-86.000
+wlan,smartphone,1454462955681632372,ATT4w598W7,30:60:23:59:87:40,2437.000,-86.000
+wlan,smartphone,1454462956723348299,,ce:35:40:68:e0:aa,2412.000,-97.000

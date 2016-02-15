@@ -1,0 +1,6 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454459608591767345,HOME-CD11-2.4,0c:54:a5:94:99:28,2437.000,-84.000
+wlan,smartphone,1454459608591763355,,0c:54:a5:94:99:29,2437.000,-81.000
+wlan,smartphone,1454459648530531715,,0c:54:a5:94:99:29,2437.000,-83.000
+wlan,smartphone,1454459648530512163,xfinitywifi,22:86:8c:69:d4:1a,5180.000,-92.000
+wlan,smartphone,1454459723196904974,,0c:54:a5:94:99:29,2437.000,-88.000

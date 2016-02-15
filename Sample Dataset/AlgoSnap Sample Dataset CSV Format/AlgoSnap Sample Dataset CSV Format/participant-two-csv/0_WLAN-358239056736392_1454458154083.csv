@@ -1,0 +1,5 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454458139100491190,FirstPres,00:02:6f:fa:12:3c,2462.000,-93.000
+wlan,smartphone,1454458139100756191,FirstPres,00:02:6f:fa:12:3c,2462.000,-93.000
+wlan,smartphone,1454458139100545359,FirstPres,00:02:6f:fa:12:3c,2462.000,-93.000
+wlan,smartphone,1454458154079003817,alexanmor,00:26:f2:06:f3:84,2412.000,-93.000

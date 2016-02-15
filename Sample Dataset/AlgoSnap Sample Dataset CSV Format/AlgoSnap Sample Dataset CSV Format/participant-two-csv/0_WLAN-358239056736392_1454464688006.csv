@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454464567864934008,xfinitywifi,22:86:8c:34:6e:6e,2437.000,-93.000
+wlan,smartphone,1454464687925430251,,d8:eb:97:b2:0b:c1,2437.000,-84.000
+wlan,smartphone,1454464687925290981,,d8:eb:97:b2:0b:c1,2437.000,-84.000

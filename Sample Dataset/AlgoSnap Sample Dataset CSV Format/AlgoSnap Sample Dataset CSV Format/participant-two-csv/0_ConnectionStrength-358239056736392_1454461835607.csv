@@ -1,0 +1,4 @@
+sensor_type, device_type, timestamps, strength, 
+connectionstrength,smartphone,1454461835604000000,7.000
+connectionstrength,smartphone,1454461859072000000,6.000
+connectionstrength,smartphone,1454461872800000000,7.000

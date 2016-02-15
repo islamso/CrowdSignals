@@ -1,0 +1,18 @@
+sensor_type, device_type, timestamps, ssid, bssid, frequency, level, 
+wlan,smartphone,1454465127986734523,CSWLAN,00:22:90:39:94:21,2412.000,-91.000
+wlan,smartphone,1454465167984736007,HOME-AEA2,00:1d:d1:82:ae:a0,2437.000,-88.000
+wlan,smartphone,1454465167984691736,,92:6b:3d:8a:fa:c0,2412.000,-90.000
+wlan,smartphone,1454465167984666247,CASAHAMMONS3,98:6b:3d:8a:fa:c0,2412.000,-91.000
+wlan,smartphone,1454465167984673663,xfinitywifi,96:6b:3d:8a:fa:c0,2412.000,-90.000
+wlan,smartphone,1454465167984679549,xfinitywifi,06:1d:d1:82:ae:a0,2437.000,-90.000
+wlan,smartphone,1454465207899974648,2WIRE287,ac:5d:10:6b:92:99,2427.000,-93.000
+wlan,smartphone,1454465280666175846,NUSD Temporary,2c:e6:cc:19:a5:ec,5180.000,-78.000
+wlan,smartphone,1454465280666117294,NUSD Stream,2c:e6:cc:99:a5:ec,5180.000,-78.000
+wlan,smartphone,1454465280666049919,2WIRE287,ac:5d:10:6b:92:99,2427.000,-91.000
+wlan,smartphone,1454465280666018419,NUSD_Guest,2c:e6:cc:59:a5:ec,5180.000,-78.000
+wlan,smartphone,1454465280666951710,NUSD Stream,2c:e6:cc:99:a5:e8,2462.000,-78.000
+wlan,smartphone,1454465280666231481,NUSD Temporary,2c:e6:cc:19:4b:0c,5745.000,-86.000
+wlan,smartphone,1454465280666162335,Homenet,00:1d:d1:56:8e:e0,2462.000,-88.000
+wlan,smartphone,1454465280666122304,,02:1d:d1:56:8e:e0,2462.000,-90.000
+wlan,smartphone,1454465280666074293,NUSD_Guest,2c:e6:cc:59:a5:e8,2462.000,-78.000
+wlan,smartphone,1454465280666033835,xfinitywifi,06:1d:d1:56:8e:e0,2462.000,-87.000
