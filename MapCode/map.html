@@ -15,6 +15,8 @@
 
 	</style>
 	<script>
+
+		//Function to initialise the map
 		function initMap() {
   var myLatLng = {lat: 40.520360, lng: -101.053234};
 
@@ -25,6 +27,8 @@
     zoom: 5
   });
 
+
+  //Array of Lats and Lngs for plotting
   var markers = [
   	[40, -101],
   	[42, -101],
@@ -33,9 +37,13 @@
   	[44, -90]
   ];
 
-  var infoWindow = new google.maps.InfoWindow(), markers, i;
 
-  for(i = 0; i < markers.length; i++)
+  //Variable for containing the data for the info window
+  var infoWindow = new google.maps.InfoWindow();
+
+
+  //Go through the markers array and plot them on the map
+  for(var i = 0; i < markers.length; i++)
   {
   	var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
   	marker = new google.maps.Marker({
@@ -44,6 +52,8 @@
   		title: 'Marker' + (i + 1)
   	})
 
+
+  	//Add an event listener to cause a infoWindow to pop up on click
   	google.maps.event.addListener(marker, 'click', (function(marker, i) {
   	return function()
   	{
