@@ -3,9 +3,10 @@
 <head>
 	<style>
 		#map {
-			width: 1800px;
-			height: 1000px;
+			width: 80vw;
+			height: 80vh;
 			border: 25px solid #059C91;
+      margin: auto;
 		}
 
 		#text {
@@ -57,7 +58,7 @@
   	google.maps.event.addListener(marker, 'click', (function(marker, i) {
   	return function()
   	{
-  		var infoWindowContent;
+  		var infoWindowContent = "<p> HERE'S SOME TEXT :) </p>";
   		infoWindow.setContent(infoWindowContent);
   		infoWindow.open(map, marker);
   	}
