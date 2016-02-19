@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#map {
+			width: 1800px;
+			height: 1000px;
+			border: 25px solid #059C91;
+		}
+
+		#text {
+			color: black;
+			font-family: Arial;
+		}
+
+	</style>
+	<script>
+		function initMap() {
+  var myLatLng = {lat: 40.520360, lng: -101.053234};
+
+  // Create a map object and specify the DOM element for display.
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    scrollwheel: true,
+    zoom: 5
+  });
+
+  var markers = [
+  	[40, -101],
+  	[42, -101],
+  	[39, -100],
+  	[40, -90],
+  	[44, -90]
+  ];
+
+  var infoWindow = new google.maps.InfoWindow(), markers, i;
+
+  for(i = 0; i < markers.length; i++)
+  {
+  	var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
+  	marker = new google.maps.Marker({
+  		position: position,
+  		map: map,
+  		title: 'Marker' + (i + 1)
+  	})
+
+  	google.maps.event.addListener(marker, 'click', (function(marker, i) {
+  	return function()
+  	{
+  		var infoWindowContent;
+  		infoWindow.setContent(infoWindowContent);
+  		infoWindow.open(map, marker);
+  	}
+  }) (marker, i));
+  }
+
+}
+</script>
+
+</head>
+<body>
+	<div id="text">
+		<h1 class="Title">CROWD TOOL</h1>
+	</div>
+	<div id="map"></div>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+	async defer></script>
+</body>
+</html>
