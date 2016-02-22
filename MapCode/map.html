@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<style>
 		#map {
 			width: 80vw;
 			height: 80vh;
-			border: 25px solid #059C91;
-      margin: auto;
+			border: 10px solid #059C91;
+			margin: auto;
 		}
 
 		#text {
@@ -14,72 +18,101 @@
 			font-family: Arial;
 		}
 
-    #Flickr {
-      width: 5vw;
-      height: 10vh;
-    }
+		#Flickr {
+			width: 5vw;
+			height: 10vh;
+		}
 
 	</style>
 	<script>
 
 		//Function to initialise the map
 		function initMap() {
-  var myLatLng = {lat: 40.520360, lng: -101.053234};
+			var myLatLng = {lat: 40.520360, lng: -101.053234};
 
-  // Create a map object and specify the DOM element for display.
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: myLatLng,
-    scrollwheel: true,
-    zoom: 5
-  });
-
-
-  //Array of Lats and Lngs for plotting
-  var markers = [
-  	[40, -101],
-  	[42, -101],
-  	[39, -100],
-  	[40, -90],
-  	[44, -90]
-  ];
+	// Create a map object and specify the DOM element for display.
+	var map = new google.maps.Map(document.getElementById('map'), {
+		center: myLatLng,
+		scrollwheel: true,
+		zoom: 5
+	});
 
 
-  //Variable for containing the data for the info window
-  var infoWindow = new google.maps.InfoWindow();
+	//Array of Lats and Lngs for plotting
+	var markers = [
+	[40, -101],
+	[42, -101],
+	[39, -100],
+	[40, -90],
+	[44, -90]
+	];
 
 
-  //Go through the markers array and plot them on the map
-  for(var i = 0; i < markers.length; i++)
-  {
-  	var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
-  	marker = new google.maps.Marker({
-  		position: position,
-  		map: map,
-  		title: 'Marker' + (i + 1)
-  	})
+	//Variable for containing the data for the info window
+	var infoWindow = new google.maps.InfoWindow();
 
 
-  	//Add an event listener to cause a infoWindow to pop up on click
-  	google.maps.event.addListener(marker, 'click', (function(marker, i) {
-  	return function()
-  	{
-  		var infoWindowContent = '<p> Flickr </p> + <img id="Flickr" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Flickr-icon.png">';
-  		infoWindow.setContent(infoWindowContent);
-  		infoWindow.open(map, marker);
-  	}
-  }) (marker, i));
-  }
+	//Go through the markers array and plot them on the map
+	for(var i = 0; i < markers.length; i++)
+	{
+		var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
+		marker = new google.maps.Marker({
+			position: position,
+			map: map,
+			title: 'Marker' + (i + 1)
+		})
+
+
+		//Add an event listener to cause a infoWindow to pop up on click
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			return function()
+			{
+				var infoWindowContent = '<p> Flickr </p> + <img id="Flickr" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Flickr-icon.png">';
+				infoWindow.setContent(infoWindowContent);
+				infoWindow.open(map, marker);
+			}
+		}) (marker, i));
+	}
 
 }
 </script>
 
 </head>
 <body>
-	<div id="text">
-		<h1 class="Title">CROWD TOOL</h1>
-	</div>
-	<div id="map"></div>
-	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-	async defer></script>
-</body>
-</html>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<a class="navbar-brand" href="#">Home</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Map</a></li>
+						<li><a href="#">Graphs</a></li>
+						<li><a href="#">Information</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<style>
+			.jumbotron { 
+				background-color: #059C91; /* green */
+				color: #ffffff;
+			}
+		</style>
+		<div class="jumbotron text-center">
+			<h1>Crowd Signals</h1> 
+			<p>Visualisation tool</p> 
+		</div>
+
+
+		<div id="map"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+		async defer></script>
+	</body>
+	</html>
