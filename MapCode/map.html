@@ -14,6 +14,11 @@
 			font-family: Arial;
 		}
 
+    #Flickr {
+      width: 5vw;
+      height: 10vh;
+    }
+
 	</style>
 	<script>
 
@@ -58,7 +63,7 @@
   	google.maps.event.addListener(marker, 'click', (function(marker, i) {
   	return function()
   	{
-  		var infoWindowContent = "<p> HERE'S SOME TEXT :) </p>";
+  		var infoWindowContent = '<p> Flickr </p> + <img id="Flickr" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/Flickr-icon.png">';
   		infoWindow.setContent(infoWindowContent);
   		infoWindow.open(map, marker);
   	}
