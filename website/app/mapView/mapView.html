@@ -1,0 +1,16 @@
+<ui-gmap-google-map center='settings.map.center' zoom='settings.map.zoom' bounds='settings.bounds'>
+
+<ui-gmap-polygon 
+	static="true" 
+	ng-repeat="p in polygons track by p.id" 
+	path="p.path" 
+	stroke="p.stroke" 
+	visible="p.visible"
+    geodesic="p.geodesic" 
+    fill="p.fill" 
+    fit="false" 
+    editable="p.editable" 
+    draggable="p.draggable"></ui-gmap-polygon>
+
+
+</ui-gmap-google-map>

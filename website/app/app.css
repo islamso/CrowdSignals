@@ -1,0 +1,10 @@
+/* app css stylesheet */
+.angular-google-map-container 
+{ 
+	height: 400px; 
+}
+
+.jumbotron { 
+  background-color: #49B6B0; /* green */
+  color: #ffffff;
+}
