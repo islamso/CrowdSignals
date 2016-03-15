@@ -6,7 +6,7 @@ angular.module('myApp', [
   'myApp.mapView',
   'myApp.graphView',
   'myApp.filterView'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/map'});
 }]);

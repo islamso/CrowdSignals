@@ -1,16 +1,34 @@
-<ui-gmap-google-map center='settings.map.center' zoom='settings.map.zoom' bounds='settings.bounds'>
 
-<ui-gmap-polygon 
+<ui-gmap-google-map center='settings.map.center' zoom='settings.map.zoom' bounds='settings.bounds'>
+<!-- <ui-gmap-polygon 
 	static="true" 
 	ng-repeat="p in polygons track by p.id" 
-	path="p.path" 
+	path="p.path"
 	stroke="p.stroke" 
 	visible="p.visible"
     geodesic="p.geodesic" 
     fill="p.fill" 
     fit="false" 
     editable="p.editable" 
-    draggable="p.draggable"></ui-gmap-polygon>
+    draggable="p.draggable"></ui-gmap-polygon> -->
 
+<ui-gmap-circle 
+    ng-repeat="c in circles track by c.id"
+    center="c.centre"
+    radius="c.radius"
+    stroke="c.stroke"
+    geodisic="c.geodisic"
+    fill="c.fill"
+    editable="c.editable"
+    draggable="c.draggable"></ui-gmap-circle>
+
+    <ui-gmap-markers models="markers" coords="'coords'" icon="'icon'" click="onClick">
+        <ui-gmap-windows show="show">
+            <div ng-non-bindable> {{'Marker: ' + id + "<br />" + 'App: ' + app}} <br /> </div>
+        </ui-gmap-windows>
+    </ui-gmap-markers>
+
+<!--     <ui-gmap-markers models="randomMarkers" coords="'coords'" icon="'icon'">
+    </ui-gmap-markers> -->
 
 </ui-gmap-google-map>
