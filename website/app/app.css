@@ -1,10 +1,16 @@
 /* app css stylesheet */
 .angular-google-map-container 
 { 
-	height: 75vh; 
+
+	height: 100vh;
+	/*width: 100vw; */
 }
 
 .jumbotron { 
   background-color: #49B6B0; /* green */
   color: #ffffff;
+}
+.navbar
+{
+	margin-bottom: 0px;
 }

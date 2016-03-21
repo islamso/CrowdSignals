@@ -3,7 +3,7 @@
 angular.module('myApp.loginView', ['ngRoute','uiGmapgoogle-maps'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/map', {
+  $routeProvider.when('/login', {
     templateUrl: 'loginView/loginView.html',
     controller: 'LoginViewController'
   });
