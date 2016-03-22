@@ -8,7 +8,7 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
 		controller: 'MapViewController'
 	});
 }])
-.controller('MapViewController', ['$scope','DataService',function($scope,DataService) {
+.controller('MapViewController', ['$scope','DataService','LocationService',function($scope,DataService,LocationService) {
     $scope.bounds={};
 	$scope.settings = {
 
@@ -67,7 +67,7 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
 	// 		opacity: 0.8
 	// 	}	
 	// }];
-
+	//markers.reduce(function(current, value, index){},[]);
 	// $scope.markers = [
 	// 	{
 	// 		id: 1,
@@ -178,6 +178,7 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
       while(true)
         yield index++;
     }
+
 
 
 
