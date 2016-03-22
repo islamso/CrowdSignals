@@ -1,0 +1,50 @@
+<div class="col-sm-4">
+    <div ng-show="markers">
+        <h4>Map Statistics</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Present Markers {{markers.length}}</li>
+          <li class="list-group-item"><button class='btn btn-success' ng-click="refresh()">Refresh</button></li>
+        </ul>
+    </div>
+
+    <div>
+        <h4>Filtering</h4>
+        <ul class="list-group">
+          <li class="list-group-item"><button class='btn btn-success' ng-click='circleFilter.visible=!circleFilter.visible'>Show Filtering Circle</button></li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+        </ul>
+    </div>
+</div>
+<div class="col-sm-8" style="padding:0px">
+    <ui-gmap-google-map center='settings.map.center' zoom='settings.map.zoom' bounds='settings.bounds'>
+
+
+        <ui-gmap-circle
+            visible='circleFilter.visible'
+            center='circleFilter.center'
+            radius='circleFilter.radius'
+            fill='circleFilter.fill'
+            stroke='circleFilter.stroke'
+            clickable='circleFilter.clickable'
+            draggable='circleFilter.draggable'
+            editable='circleFilter.editable'
+            >
+            </ui-gmap-circle>
+
+        <ui-gmap-markers models="markers" coords="'self'" icon="'icon'" click='onClick'>
+            <ui-gmap-windows show='show'>
+                <div ng-non-bindable=""><b>Marker</b>{{id}}<br><b>App</b>{{app}}</div>
+            </ui-gmap-windows>
+        </ui-gmap-markers>
+
+</ui-gmap-google-map>
+
+</div>
+
+
+
+<!-- for gmap-circle
+visible='{expression}'events='{expression}'
+ -->
