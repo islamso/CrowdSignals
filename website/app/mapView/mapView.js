@@ -180,8 +180,6 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
     }
 
 
-
-
     $scope.refresh=function()
     {
         $scope.markers=$scope.prototypeMarkers.filter((marker)=> 

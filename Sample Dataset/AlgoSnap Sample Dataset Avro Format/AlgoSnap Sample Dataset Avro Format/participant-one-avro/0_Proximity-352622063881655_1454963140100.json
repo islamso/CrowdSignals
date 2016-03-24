@@ -1,0 +1,5 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "proximity", "start": 1454962995000000000, "end": 1454962996000000000, "distance": [0], "maxRange": [8], "timestamps": [1454962995932433021]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "proximity", "start": 1454963140000000000, "end": 1454963141000000000, "distance": [8, 0, 8, 0, 8], "maxRange": [8, 8, 8, 8, 8], "timestamps": [1454963140010466406, 1454963140050388386, 1454963140580826458, 1454963140716254010, 1454963140826018646]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "proximity", "start": 1454963150000000000, "end": 1454963151000000000, "distance": [0], "maxRange": [8], "timestamps": [1454963150350631041]}
+]

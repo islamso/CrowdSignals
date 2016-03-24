@@ -1,0 +1,3 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "bluetooth", "start": 1454962215000000000, "end": 1454962245000000000, "address": ["00:1E:AE:4B:59:66", "7C:7A:91:8C:36:FF", "CD:BD:8C:F0:37:7B"], "name": ["null", "null", "kitt_2c41"], "rssi": [-107, -100, -104], "timestamps": [1454962217416000000, 1454962222229000000, 1454962225043000000]}
+]

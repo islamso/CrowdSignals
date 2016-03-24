@@ -1,0 +1,4 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "bluetooth", "start": 1454959815000000000, "end": 1454959845000000000, "address": ["73:96:79:5D:3C:7C", "40:83:DE:48:57:1E"], "name": ["null", "WindowsCE"], "rssi": [-102, -99], "timestamps": [1454959816901000000, 1454959819148000000]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "bluetooth", "start": 1454959935000000000, "end": 1454959965000000000, "address": ["54:B8:E9:80:E4:1E"], "name": ["null"], "rssi": [-100], "timestamps": [1454959939388000000]}
+]

@@ -1,0 +1,4 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "phonestate", "start": 1454960470782000000, "end": 1454960470782000000, "event_type": ["DataActivity"], "data": ["DATA_ACTIVITY_INOUT"], "number": ["null"], "timestamps": [1454960470782000000]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "phonestate", "start": 1454960471811000000, "end": 1454960471811000000, "event_type": ["DataActivity"], "data": ["DATA_ACTIVITY_NONE"], "number": ["null"], "timestamps": [1454960471811000000]}
+]
