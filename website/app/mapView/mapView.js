@@ -193,5 +193,20 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
             return marker;
         });
     }
+
+    $scope.list= function(x, y)
+    {
+    	$scope.markers=$scope.prototypeMarkers.filter((marker)=>
+    	{
+    		return (marker.id > x && marker.id < y);
+    	});
+
+    	$scope.markers.map((marker)=>
+    	{
+    		marker.app = 'test';
+    		marker.show = false;
+    		return marker;
+    	});
+    };
 }]);
 
