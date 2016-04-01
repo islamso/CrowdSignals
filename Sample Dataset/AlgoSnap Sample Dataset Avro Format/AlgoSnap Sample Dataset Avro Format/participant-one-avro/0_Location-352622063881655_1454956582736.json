@@ -1,0 +1,4 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "location", "start": 1454956583486000000, "end": 1454956583486000000, "latitude": [47.546097], "longitude": [-122.05943], "accuracy": [48.0], "speed": [6.8500004], "bearing": [247.3], "provider": ["gps"], "isPassive": [true], "timestamps": [1454956583486000000]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "location", "start": 1454956593465000000, "end": 1454956593465000000, "latitude": [47.546135], "longitude": [-122.059425], "accuracy": [44.0], "speed": [2.4780838], "bearing": [247.3], "provider": ["gps"], "isPassive": [true], "timestamps": [1454956593465000000]}
+]

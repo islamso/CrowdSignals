@@ -1,0 +1,3 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "sms", "start": 1454957301189000000, "end": 1454957301189000000, "content_length": [8], "num_words": [2], "address": ["E7FEE4137E6ED5DAE2AAB26C61787B89F1BDFA9422A1207F8EA562E524610987"], "msg_type": ["1"], "event_type": ["SMSContentChanged"], "timestamps": [1454957301189]}
+]

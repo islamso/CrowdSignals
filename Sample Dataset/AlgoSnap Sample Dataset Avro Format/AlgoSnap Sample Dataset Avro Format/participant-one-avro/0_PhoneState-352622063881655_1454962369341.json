@@ -1,0 +1,5 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "phonestate", "start": 1454962369339000000, "end": 1454962369339000000, "event_type": ["CellLocationChanged"], "data": ["[37127,108762376,0]"], "number": ["null"], "timestamps": [1454962369339000000]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "phonestate", "start": 1454962371688000000, "end": 1454962371688000000, "event_type": ["DataActivity"], "data": ["DATA_ACTIVITY_INOUT"], "number": ["null"], "timestamps": [1454962371688000000]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "phonestate", "start": 1454962372685000000, "end": 1454962372685000000, "event_type": ["DataActivity"], "data": ["DATA_ACTIVITY_NONE"], "number": ["null"], "timestamps": [1454962372685000000]}
+]

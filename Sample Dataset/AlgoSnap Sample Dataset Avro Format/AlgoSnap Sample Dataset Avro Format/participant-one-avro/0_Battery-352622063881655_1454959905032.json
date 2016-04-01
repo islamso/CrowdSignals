@@ -1,0 +1,4 @@
+[
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "battery", "start": 1454959875000000000, "end": 1454959905000000000, "level": [92, 92], "scale": [100, 100], "temperature": [286, 287], "voltage": [4220, 4203], "plugged": [0, 0], "status": ["DISCHARGING", "DISCHARGING"], "health": ["GOOD", "GOOD"], "timestamps": [1454959875078000000, 1454959894984000000]},
+{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "battery", "start": 1454959965000000000, "end": 1454959995000000000, "level": [92, 92], "scale": [100, 100], "temperature": [290, 291], "voltage": [4228, 4223], "plugged": [0, 0], "status": ["DISCHARGING", "DISCHARGING"], "health": ["GOOD", "GOOD"], "timestamps": [1454959965113000000, 1454959985691000000]}
+]

@@ -89,7 +89,6 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
     }
 
 
-
     $scope.showCircle=function()
     {
         $scope.circleFilter.visible=!$scope.circleFilter.visible;
@@ -116,5 +115,20 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         });
         $scope.averageSpeed/=speedCount;
     }
+
+    $scope.list= function(x, y)
+    {
+    	$scope.markers=$scope.prototypeMarkers.filter((marker)=>
+    	{
+    		return (marker.id > x && marker.id < y);
+    	});
+
+    	$scope.markers.map((marker)=>
+    	{
+    		marker.app = 'test';
+    		marker.show = false;
+    		return marker;
+    	});
+    };
 }]);
 

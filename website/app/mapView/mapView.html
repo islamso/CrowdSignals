@@ -35,6 +35,15 @@
                                 </uib-accordion-heading>
                             </uib-accordion-group>
                         </uib-accordion>
+                        <ul class="list-group">
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='circleFilter.visible=!circleFilter.visible'>Show Filtering Circle</button></li>
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(0, 9)'>List 0-9</button></li>
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(10, 19)'>List 10-19</button></li>
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(20, 29)'>List 20-29</button></li>
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(30, 39)'>List 30-39</button></li>
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(40, 49)'>List 40-49</button></li>
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(50, 59)'>List 50-59</button></li>
+                        </ul>
                     </div>
                 </div>
             </uib-tab>
@@ -42,6 +51,7 @@
 </div>
 <div class="col-sm-8" style="padding:0px;">
     <ui-gmap-google-map center='settings.map.center' zoom='settings.map.zoom' bounds='settings.bounds'>
+
         <ui-gmap-circle
             visible='circleFilter.visible'
             center='circleFilter.center'
@@ -58,7 +68,16 @@
             models="markers" 
             coords="'self'" 
             icon="'icon'">
-        </ui-gmap-markers>
+
+<!--         <ui-gmap-markers models="markers" coords="'self'" icon="'icon'" click='onClick'>
+            <ui-gmap-windows show='show'>
+                <div ng-non-bindable="">
+                Marker Markup here
+                    <b>Marker</b>{{id}}<br><b>App</b>{{app}}
+                    <i class="fa fa-facebook-official"></i>
+                </div>
+            </ui-gmap-windows>
+        </ui-gmap-markers> -->
 
 </ui-gmap-google-map> 
 
