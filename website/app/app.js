@@ -14,6 +14,6 @@ angular.module('myApp', [
 ])
 .config(['$routeProvider','$httpProvider', function($routeProvider,$httpProvider) {
   $routeProvider.otherwise({redirectTo: '/login'});
-  $httpProvider.defaults.withCredentials = true;
+  $httpProvider.defaults.withCredentials = false;
 }])
-.constant('ApiUrl','http://crowdsignals.eu-1.evennode.com/api/')
+.constant('ApiUrl','http://crowdsignals.eu-1.evennode.com/api')

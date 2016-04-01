@@ -8,9 +8,8 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
 		controller: 'MapViewController'
 	});
 }])
-.controller('MapViewController', ['$scope','DataService','LocationService',function($scope,DataService,LocationService) {
-   
-	DataService.locationsFromServer().success(function(data)
+.controller('MapViewController', ['$scope','ApiService','LocationService',function($scope,ApiService,LocationService) {
+	ApiService.getLocations().success(function(data)
 		{
 				$scope.data=data;
 				$scope.createMarkers();

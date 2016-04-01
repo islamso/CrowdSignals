@@ -1,4 +1,4 @@
-angular.module('myApp.services',[])
+angular.module('myApp.services')
 .service('ApiService',['ApiUrl','$http',function(ApiUrl,$http)
 {
 	this.getLocations=function(){return $http.get(ApiUrl+'/location'); }

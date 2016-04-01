@@ -8,23 +8,23 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-12">
-                    <form action="" method="post" name="Login" class="form-horizontal"> 
+                    <form name="login" class="form-horizontal" novalidate> 
                         <div class="form-group label-floating" id='username-input'>
                             <div class="input-group">
                                 <span class="input-group-addon"> 
                                     <i class="fa fa-user"></i>
                                 </span>
                                 <label class='control-label' for="username-input">Username</label>
-                                <input type="text" id='username-input' class="form-control" name="Username" placeholder="" required/>
+                                <input type="text" ng-model='username' id='username-input' class="form-control" name="username" required/>
                             </div>
                         </div>
-                        <div class="form-group label-floating" id='password-input'>
+                        <div class="form-group " id='password-input'>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock"></i>
                                 </span>
                                 <label class='control-label' for="password-input">Password</label>
-                                <input type="password" id='password-input' class="form-control" name="Password" placeholder="" required/>              
+                                <input type="password" ng-model='password' id='password-input' class="form-control" name="password" required/>              
                             </div>
                         </div>
                         <button class="btn btn-lg btn-success btn-block" name="Submit" value="Enter" type="Submit" >Submit</button>              
@@ -35,6 +35,7 @@
     </div>
 </div>
 <div class="col-sm-3"></div>
+<pre>{{login | json}}</pre>
 </div>
 
 
