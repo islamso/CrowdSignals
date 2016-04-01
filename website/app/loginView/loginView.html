@@ -7,27 +7,29 @@
                 <h3>Log In</h3>
             </div>
             <div class="panel-body">
-                <form action="" method="post" name="Login" class="form-horizontal"> 
-                    <div id='username-input'class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"> 
-                                <i class="fa fa-user"></i>
-                            </span>
-                            <label for="username-input">Username</label>
-                            <input type="text" id='username-input' class="form-control" name="Username" placeholder="" required/>
+                <div class="col-sm-12">
+                    <form action="" method="post" name="Login" class="form-horizontal"> 
+                        <div class="form-group label-floating" id='username-input'>
+                            <div class="input-group">
+                                <span class="input-group-addon"> 
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <label class='control-label' for="username-input">Username</label>
+                                <input type="text" id='username-input' class="form-control" name="Username" placeholder="" required/>
+                            </div>
                         </div>
-                    </div>
-                    <div id='password-input'class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="fa fa-lock"></i>
-                            </span>
-                            <label for="password-input">Password</label>
-                            <input type="password" id='password-input' class="form-control" name="Password" placeholder="" required/>              
+                        <div class="form-group label-floating" id='password-input'>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                                <label class='control-label' for="password-input">Password</label>
+                                <input type="password" id='password-input' class="form-control" name="Password" placeholder="" required/>              
+                            </div>
                         </div>
-                    </div>
-                    <button class="btn btn-lg btn-success btn-block" name="Submit" value="Enter" type="Submit" >Submit</button>              
-                </form> 
+                        <button class="btn btn-lg btn-success btn-block" name="Submit" value="Enter" type="Submit" >Submit</button>              
+                    </form> 
+                </div>
             </div>
         </div>
     </div>
