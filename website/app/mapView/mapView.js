@@ -92,7 +92,7 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
     $scope.showCircle=function()
     {
         $scope.circleFilter.visible=!$scope.circleFilter.visible;
-        //$scope.circleFilter.center=angular.copy($scope.settings.map.center)
+        $scope.circleFilter.center=angular.copy($scope.settings.map.center);
     }
     $scope.refresh=function()
     {
