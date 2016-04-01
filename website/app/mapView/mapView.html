@@ -27,22 +27,77 @@
                                 <uib-accordion-heading>
                                 Users<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.users, 'glyphicon-chevron-right': !status.users}"></i>
                                 </uib-accordion-heading>
-                    
+                                <uib-accordion-body>
+                                    <div class="col-xs-7"><input type="text" class="form-control" placeholder="Enter User ID here (e.g. 4114673):"></input>
+                                    <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span></div>
+                                </uib-accordion-body>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="">
+                                <uib-accordion-heading>
+                                    Application<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.custom, 'glyphicon-chevron-right': !status.custom}"></i>
+                                </uib-accordion-heading>
+                                <uib-accordion-body>
+                                    <select class="form-control">
+                                        <option value="app1">App1</option>
+                                        <option value="app2">App2</option>
+                                        <option value="app3">App3</option>
+                                        <option value="app4">App4</option>
+                                        <option value="app5">App5</option>
+                                        <option value="app6">App6</option>
+                                    </select>
+                                    <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span>
+                                </uib-accordion-body>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="">
+                                <uib-accordion-heading>
+                                    Location<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.custom, 'glyphicon-chevron-right': !status.custom}"></i>
+                                </uib-accordion-heading>
+                                <uib-accordion-body>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic addon">X</span>
+                                    <input type="text" class="form-control" placeholder="X Coord:"></input>
+
+                                    <span class="input-group-addon" id="basic addon">Y</span>
+                                    <input type="text" class="form-control" placeholder="Y Coord:"></input>
+
+                                    <span class="input-group-addon" id="basic addon">Radius</span>
+                                    <input type="text" class="form-control" placeholder="Enter Radius here"></input>
+                                </div>
+                                <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span>
+                                </uib-accordion-body>
                             </uib-accordion-group>
                             <uib-accordion-group is-open="status.date">
                                 <uib-accordion-heading>
                                 Date<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.date, 'glyphicon-chevron-right': !status.date}"></i>
                                 </uib-accordion-heading>
+                                <uib-accordion-body>
+                                    <form class='form-horizontal'>
+                                        <div class="col-sm-5">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <label for="from-date" control-label>From Time:</label>
+                                                    <input type="datetime-local" class='form-control' id='from-date'></input>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <label for="to-date" control-label>To Time:</label>
+                                                    <input type="datetime-local" class='form-control' id='to-date'></input></div>
+                                            </div>
+                                            <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span>
+                                        </div> 
+                                    </form>
+                                </uib-accordion-body>
                             </uib-accordion-group>
                         </uib-accordion>
                         <ul class="list-group">
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='circleFilter.visible=!circleFilter.visible'>Show Filtering Circle</button></li>
+                          <!-- <li class="list-group-item"><button class='btn btn-success' ng-click='circleFilter.visible=!circleFilter.visible'>Show Filtering Circle</button></li>
                           <li class="list-group-item"><button class='btn btn-success' ng-click='list(0, 9)'>List 0-9</button></li>
                           <li class="list-group-item"><button class='btn btn-success' ng-click='list(10, 19)'>List 10-19</button></li>
                           <li class="list-group-item"><button class='btn btn-success' ng-click='list(20, 29)'>List 20-29</button></li>
                           <li class="list-group-item"><button class='btn btn-success' ng-click='list(30, 39)'>List 30-39</button></li>
                           <li class="list-group-item"><button class='btn btn-success' ng-click='list(40, 49)'>List 40-49</button></li>
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(50, 59)'>List 50-59</button></li>
+                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(50, 59)'>List 50-59</button></li> -->
                         </ul>
                     </div>
                 </div>
