@@ -14,7 +14,6 @@ var morgan=require('morgan'),
 app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('../website/app'));
 app.set('json spaces',4)
 
 
@@ -44,10 +43,10 @@ var options = {
   user: 'userAdmin',
   pass: "k1zg6c=#brt?$VsgpG5F'Ub(yf9plC"
 }
-
+var config = JSON.parse(process.env.APP_CONFIG);
 var db=mongoose.connection;
-mongoose.connect('mongodb://localhost:27017/crowd-signals');
-
+mongoose.connect("mongodb://" + config.mongo.user + ":<your_password_here>@" +
+		config.mongo.hostString);
 db.on('open',function()
 	{
 		console.log('Connected to db on mongodb://localhost:27017/crowd-signals');
@@ -64,3 +63,4 @@ db.on('error',function()
 app.listen(process.env.PORT || 8080, ()=>{
 	console.log(`App listening on port ${process.env.PORT || 8080}`);
 });
+
