@@ -18,7 +18,7 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
     $scope.status={
         users:false,
         date:false,
-        custom:true
+        custom:false
     }
     $scope.bounds={};
 	$scope.settings = {
