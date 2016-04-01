@@ -1,26 +1,47 @@
+<div class="navbar-overlap"></div>
 <div class="col-sm-4">
-    <div ng-show="markers">
-        <h4>Map Statistics</h4>
-        <ul class="list-group">
-          <li class="list-group-item">Present Markers {{markers.length}}</li>
-          <li class="list-group-item"><button class='btn btn-success' ng-click="refresh()">Refresh</button></li>
-        </ul>
-    </div>
-
-    <div>
-        <h4>Filtering</h4>
-        <ul class="list-group">
-          <li class="list-group-item"><button class='btn btn-success' ng-click='circleFilter.visible=!circleFilter.visible'>Show Filtering Circle</button></li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-        </ul>
-    </div>
+    <uib-tabset active='0'>
+            <uib-tab index="0" heading="Statistics">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <b>Markers</b> <span class="badge">{{markers.length}}</span>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Average Speed:</b> {{averageSpeed | limitTo:10}}ms<sup>-1</sup>
+                    </li>
+                </ul>
+            </uib-tab>
+            <uib-tab index="1" heading="Filtering">
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <uib-accordion>                    
+                            <uib-accordion-group is-open="status.custom">
+                                <uib-accordion-heading>
+                                Custom<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.custom, 'glyphicon-chevron-right': !status.custom}"></i>
+                                </uib-accordion-heading>
+                                <button class='btn btn-success' ng-click='showCircle()'>Show Filter</button>
+                                <button class='btn btn-success' ng-click='refresh()'>Refresh</button>
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="status.users">
+                                <uib-accordion-heading>
+                                Users<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.users, 'glyphicon-chevron-right': !status.users}"></i>
+                                </uib-accordion-heading>
+                    
+                            </uib-accordion-group>
+                            <uib-accordion-group is-open="status.date">
+                                <uib-accordion-heading>
+                                Date<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.date, 'glyphicon-chevron-right': !status.date}"></i>
+                                </uib-accordion-heading>
+                            </uib-accordion-group>
+                        </uib-accordion>
+                    </div>
+                </div>
+            </uib-tab>
+    </uib-tabset>
 </div>
-<div class="col-sm-8" style="padding:0px">
+<div class="col-sm-8" style="padding:0px;">
     <ui-gmap-google-map center='settings.map.center' zoom='settings.map.zoom' bounds='settings.bounds'>
-
-
         <ui-gmap-circle
             visible='circleFilter.visible'
             center='circleFilter.center'
@@ -33,22 +54,13 @@
             >
             </ui-gmap-circle>
 
-        <ui-gmap-markers models="markers" coords="'self'" icon="'icon'" click='onClick'>
-            <ui-gmap-windows show='show'>
-                <div ng-non-bindable="">
-                <!--Marker Markup here-->
-                    <b>Marker</b>{{id}}<br><b>App</b>{{app}}
-
-                </div>
-            </ui-gmap-windows>
+        <ui-gmap-markers 
+            models="markers" 
+            coords="'self'" 
+            icon="'icon'">
         </ui-gmap-markers>
 
-</ui-gmap-google-map>
+</ui-gmap-google-map> 
 
 </div>
 
-
-
-<!-- for gmap-circle
-visible='{expression}'events='{expression}'
- -->

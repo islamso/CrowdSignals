@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var ParticipantSchema = new Schema(
 	{
 		id: String,
-		devices:[Schema.Types.ObjectId]
+		snapshots:[Schema.Types.ObjectId]
 	});
 
 //var Participant= mongoose.model('Participant', ParticipantSchema);

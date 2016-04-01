@@ -1,7 +1,7 @@
 /* app css stylesheet */
 .angular-google-map-container 
 { 
-
+	margin-top:39px;
 	height: 100vh;
 	/*width: 100vw; */
 }
@@ -10,11 +10,19 @@
   background-color: #49B6B0; /* green */
   color: #ffffff;
 }
-<<<<<<< HEAD
-
-=======
-.navbar
+.navbar-default
 {
 	margin-bottom: 0px;
 }
->>>>>>> 86c5e91d6ad4bb6e8a1c642d3e80691534a28e8e
+
+.navbar-overlap
+{
+	position: absolute;
+	height: 39px;
+	width: 100%;
+	background-color: #009688;
+}
+.btn.btn-success.active
+{
+	color: white;
+}

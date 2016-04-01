@@ -2,13 +2,17 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
+  'ui.bootstrap',
   'ngRoute',
+  'ngCookies',
   'myApp.services',
   'myApp.mapView',
   'myApp.graphView',
-  'myApp.filterView',
+  'myApp.searchView',
   'myApp.loginView'
 ])
-.config(['$routeProvider', function($routeProvider) {
+.config(['$routeProvider','$httpProvider', function($routeProvider,$httpProvider) {
   $routeProvider.otherwise({redirectTo: '/login'});
-}]);
+  $httpProvider.defaults.withCredentials = true;
+}])
+.constant('ApiUrl','api/')

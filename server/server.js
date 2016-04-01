@@ -1,48 +1,60 @@
-var path=require('path'),
-	mysql=require('mysql'),
+var morgan=require('morgan'),
 	bodyParser=require('body-parser'),
-	express=require('express'),
 	passport=require('passport'),
-	Routes=require('./routes/routes.js'),
+	//mongoose=require('mongoose'),
+	mongoose=require('node-restful').mongoose,
+	sessions=require('client-sessions'),
+	express=require('express'),
+	routes=require('./lib/routes/routes.js'),
+	api=require('./lib/routes/api.js'),
 	app=express();
 
 
 /*----------  Middlware  ----------*/
-app.use(express.static('../website/app'));
-app.use(Routes);
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(morgan('tiny'));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('../website/app'));
+app.set('json spaces',4)
+
+
+// app.use(sessions({
+//   cookieName: 'session',	// cookie name dictates the key name added to the request object 
+//   secret: "k1zg6c=#brt?$VsgpG5F'Ub(yf9plCk1zg6c=#brt?$VsgpG5F'Ub(yf9plCk1zg6c=#brt?$VsgpG5F'Ub(yf9plC", // should be a large unguessable string 
+//   duration: 24 * 60 * 60 * 1000, // how long the session will stay valid in ms 
+//   activeDuration: 1000 * 60 * 5 // if expiresIn < activeDuration, the session will be extended by activeDuration milliseconds 
+// }));
+
+
+//Set api resources
+app.get('*',function(req,res,next)
+{
+	res.set('Access-Control-Allow-Origin','*')
+	next();
+});
+require('./lib/resources/resources.js')(app);
+app.use(routes);
+
+
+
+
 
 /*----------  Database Setup  ----------*/
-// var options = {
-//   db: { native_parser: true },
-//   server: { poolSize: 5 },
-//   replset: { rs_name: 'myReplicaSetName' },
-//   user: 'myUserName',
-//   pass: 'myPassword'
-// }
-// var db= mongoose.connect(uri, options);
-// db.on('open',);
-// db.on('error',);
+var options = {
+  user: 'userAdmin',
+  pass: "k1zg6c=#brt?$VsgpG5F'Ub(yf9plC"
+}
 
-
-
-
-// var connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'me',
-//   password : 'secret',
-//   database : 'my_db'
-// });
-
-// connection.connect();
-
-// connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-//   if (err) throw err;
-
-//   console.log('The solution is: ', rows[0].solution);
-// });
-
+var db=mongoose.connection;
+mongoose.connect('mongodb://localhost:27017/crowd-signals');
+db.on('open',function()
+	{
+		console.log('Connected to db on mongodb://localhost:27017/crowd-signals');
+	});
+db.on('error',function()
+	{
+		console.log('Error connecting to db');
+	});
 
 
 
@@ -51,5 +63,3 @@ app.use(bodyParser.json());
 app.listen(process.env.PORT || 8080, ()=>{
 	console.log(`App listening on port ${process.env.PORT || 8080}`);
 });
-
-

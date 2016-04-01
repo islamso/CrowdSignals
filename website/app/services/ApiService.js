@@ -1,17 +1,9 @@
 angular.module('myApp.services',[])
-.service('ApiService',['$q',function($q)
+.service('ApiService',['ApiUrl','$http',function(ApiUrl,$http)
 {
-	var user={
-		"id":jk23j4k,
-		"devices":[]
-	};
-	this.getData=function()
-	{
-		return $q(function(resolve, reject)
-			{
-				resolve(user);
-			});
-	};	
+	this.getLocations=function(){return $http.get(ApiUrl+'/location'); }
+	this.getLocationsByUserId=function(userId) {return $http.get(ApiUrl+'/location/'+userId); } 
+
 }]);
 
 
