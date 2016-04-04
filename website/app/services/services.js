@@ -1,4 +1,4 @@
-angular.module('myApp.services',[])
+angular.module('myApp.services',['angular-jwt'])
 .service('DataService',['$http',function($http)
 {
 	this.getLocationData=function()

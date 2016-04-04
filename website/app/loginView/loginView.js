@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.loginView', ['ngRoute','uiGmapgoogle-maps'])
+angular.module('myApp.loginView', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/login', {
@@ -8,5 +8,27 @@ angular.module('myApp.loginView', ['ngRoute','uiGmapgoogle-maps'])
     controller: 'LoginViewController'
   });
 }])
-.controller('LoginViewController', ['$scope',function($scope) {
+.controller('LoginViewController', ['$scope','AuthenticationService','$location','$timeout',function($scope,AuthenticationService,$location,$timeout) {
+	$scope.login=function()
+	{
+		function success(data){
+			console.log('firing')
+			$location.path('/search')
+		}
+		function error(error){
+			$scope.addError({type:'danger',heading:'Error Occurred!',message:error})
+		}
+		AuthenticationService.login({username: $scope.username,password:$scope.password}).then(success,error);
+	}
+
+	//Error Handling
+	$scope.errors;
+	$scope.addError=function(error)
+	{
+		$scope.error=error;
+	};
+	$scope.removeError=function(error)
+	{
+		delete $scope.error;
+	};
 }]);

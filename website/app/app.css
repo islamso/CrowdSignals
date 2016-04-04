@@ -5,7 +5,6 @@
 	height: 100vh;
 	/*width: 100vw; */
 }
-
 .jumbotron { 
   background-color: #49B6B0; /* green */
   color: #ffffff;
@@ -21,6 +20,7 @@
 	height: 39px;
 	width: 100%;
 	background-color: #009688;
+	z-index: -1;
 }
 .btn.btn-success.active
 {
@@ -29,4 +29,10 @@
 #login
 {
 	margin-top:50px;
+}
+#graph-wrapper
+{
+	margin-top:39px;
+	background-color: white;
+	padding:20px;
 }

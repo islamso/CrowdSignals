@@ -1,72 +1,29 @@
-var express=require('express'),
-	Api= express.Router(),
-	mongoose=require('mongoose'),
-	/*----------  AppUsage  ----------*/
-	AppUsageSchema=require('../schemas/appusage-schema.js'),
-	AppUsage=mongoose.model('AppUsage', AppUsageSchema),
+'use strict';
 
-	/*----------  Location  ----------*/
-	LocationSchema=require('../schemas/location-schema.js'),
-	Location=mongoose.model('Location', LocationSchema),
+let AppUsageModel=require('../models/appusage-model.js'),
+	LocationModel=require('../models/location-model.js'),
+	BatteryModel=require('../models/battery-model.js');
 
-	/*----------  User  ----------*/
-	UserSchema=require('../schemas/user-schema.js'),
-	User=mongoose.model('User', UserSchema),
-
-	/*----------  Battery  ----------*/
-	BatterySchema=require('../schemas/battery-schema.js'),
-	Battery=mongoose.model('Battery', BatterySchema);
-
-
-//All Locations
-Api.get('/location',function(req,res)
-	{
-		Location.find({}, function (err, locations) {
-			console.log('I got called!');
-			if (err) res.send(404);
-		  	res.json(locations);
-		});
-	});
-
-//Locations by user id
-Api.get('/location/:userId',function(req,res)
-	{
-		Location.find({"user_id":req.params.userId}, function (err, locations) {
-			console.log('I got called!');
-			if (err) res.send(404);
-			res.json(locations);
-		});
-	});
-
-//All Battery
-Api.get('/battery',function(req,res)
-	{
-		Battery.find({}, function (err, battery) {
-			console.log('I got called!');
-			if (err) res.send(404);
-		  	res.json(battery);
-		});
-	});
-
-//Battery by user id
-Api.get('/battery/:userId',function(req,res)
-	{
-		Battery.find({"user_id":req.params.userId}, function (err, battery) {
-			console.log('I got called!');
-			if (err) res.send(404);
-			res.json(battery);
-		});
-	});
-
-module.exports=Api;
-
-/*
-function(Router)
+function setup(app)
 {
-	for(model in models)
+	function authRequired(req,res,next)
 	{
-		attach model route
-	}	
+		if(req.user) next();
+		else res.status(401).send('Unable to view information without being logged in.');
+	}
+	let Battery = app.battery = BatteryModel.methods(['get']);
+	Battery.before('get',authRequired);
+	Battery.register(app, '/api/battery');
+
+	let Location = app.location = LocationModel.methods(['get']);
+	Location.before('get',authRequired);
+	Location.register(app, '/api/location');
+
+	let AppUsage = app.appusage = AppUsageModel.methods(['get']);
+	AppUsage.before('get',authRequired);
+	AppUsage.register(app, '/api/appusage');
 }
 
-*/
+
+
+module.exports= setup;

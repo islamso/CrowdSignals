@@ -1,27 +1,57 @@
+<div class="navbar-overlap"></div>
 <div class="container">
+	<br>
 	<div class="well well-lg">
-		<form class="form-horizontal">
-			<fieldset>
-				<legend>Dataset Filter</legend>
+			<form class="form-horizontal" name="searchForm">
+				<fieldset>
+					<legend>Search</legend>
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10">
+						<div class="form-group">
+							<h5>Dataset</h3>
+							<div class="col-md-10">
+								<div class="radio">
+									<label>
+					                	<input type="radio" name="dataset-input" ng-model='dataset' value="location" checked="">
+					                	<span class="circle"></span>
+					                	<span class="check"></span>
+					                Location
+					              </label>
+								</div>
+								<div class="radio">
+									<label>
+					                	<input type="radio" name="dataset-input" ng-model='dataset' value="battery" checked="">
+					                	<span class="circle"></span>
+					                	<span class="check"></span>
+					                Battery
+					              </label>
+								</div>
+							</div>
+						</div>
 
-					<div class="form-group">
-						<label for="dataset-selection" class="col-sm-2" control-label>Dataset Selection</label>
-					    <div class="btn-group" id="dataset-selection">
-					        <label class="btn btn-success btn-raised" ng-model="datasetModel.location" uib-btn-checkbox>Location</label>
-					        <label class="btn btn-success btn-raised" ng-model="datasetModel.battery" uib-btn-checkbox>Battery</label>
-					        <label class="btn btn-success btn-raised" ng-model="datasetModel.appusage" uib-btn-checkbox>App Usage</label>
-					    </div>
-				    </div>
-
-				    <div class="form-group">
-				    	<label for="user-number-input" class="col-sm-2" control-label>Number of users</label>
-				    	<div class="col-sm-10">
-							<input type="text" class="form-control" id="user-number-input">
-				    	</div>
-				    </div>
-			</fieldset>
-		</form>
-		<!-- .form-horizontal -->
+						<!-- Users -->
+						<div class="form-group">
+							<h5>Users</h3>
+							<label for="testInput" class="control-label col-sm-1">Max No.</label>
+							<div class="col-sm-6"><input type="number" class="form-control" id="testInput"></div>
+						</div>
+						
+						<!-- Date -->
+						<div class="form-group">
+							<h5>Date</h3>
+							<label for="from-date" class="control-label col-sm-1">From</label>
+							<div class="col-sm-6"><input type="date" class="form-control" id="from-date" ng-model="fromDate"></div>
+						</div>
+						<div class="form-group">
+							<label for="until-date" class="control-label col-sm-1">Until</label>
+							<div class="col-sm-6"><input type="date" class="form-control" id="until-date" ng-model="untilDate"></div>
+						</div>
+					</div>
+					<button ng-show="dataset == 'location'" ng-disabled="searchForm.$invalid" class="btn btn-raised btn-primary" ng-click="change()">Map</button>
+					<a href="" ng-show="dataset == 'battery'" ng-disabled="searchForm.$invalid" class="btn btn-raised btn-primary" ng-click="graph()">Graph</a>
+				</fieldset>
+			</form>
+			<!-- .form-horizontal -->
 	</div>
 	<!-- .well.well-lg -->
 </div>

@@ -1,42 +1,43 @@
 <div class="container">
-<div class="col-sm-3"></div>
-<div class="col-sm-6">
-    <div id="login">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3>Log In</h3>
-            </div>
-            <div class="panel-body">
-                <div class="col-sm-12">
-                    <form name="login" class="form-horizontal" novalidate> 
-                        <div class="form-group label-floating" id='username-input'>
-                            <div class="input-group">
-                                <span class="input-group-addon"> 
-                                    <i class="fa fa-user"></i>
-                                </span>
-                                <label class='control-label' for="username-input">Username</label>
-                                <input type="text" ng-model='username' id='username-input' class="form-control" name="username" required/>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <div id="login">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Log In</h3>
+                </div>
+                <div class="panel-body"> 
+                    <div class="col-sm-12">
+                        <form name="loginForm" class="form-horizontal" novalidate> 
+                            <div class="form-group">
+                                <label class="control-label" for="username-input">Username</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" name='username' ng-model='username' class="form-control" id="username-input" required/>
+                                </div>
+                                <span class="material-input"></span>
                             </div>
-                        </div>
-                        <div class="form-group " id='password-input'>
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <i class="fa fa-lock"></i>
-                                </span>
-                                <label class='control-label' for="password-input">Password</label>
-                                <input type="password" ng-model='password' id='password-input' class="form-control" name="password" required/>              
+                            <div class="form-group">
+                                <label class="control-label" for="password-input">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <input type="password" name='password' ng-model='password' class="form-control" id="password-input" required/>
+                                </div>
+                                <span class="material-input"></span>
                             </div>
-                        </div>
-                        <button class="btn btn-lg btn-success btn-block" name="Submit" value="Enter" type="Submit" >Submit</button>              
-                    </form> 
+                            <button class="btn btn-lg btn-success btn-block" ng-disabled='loginForm.$invalid' ng-click='login()'>Submit</button>              
+                        </form> 
+                    </div>
                 </div>
             </div>
         </div>
+        <div ng-show="error" class="alert alert-dismissible alert-{{error.type}}">
+            <button type="button" class="close" ng-click="removeError()">×</button>
+            <h4>{{error.heading}}</h4>
+            <p>{{error.message}}</p>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <pre>{{errors | json}}</pre>
     </div>
 </div>
-<div class="col-sm-3"></div>
-<pre>{{login | json}}</pre>
-</div>
-
-
-    

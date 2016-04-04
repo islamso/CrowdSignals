@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" >
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -30,12 +30,17 @@
         </button>
         <a class="navbar-brand" href="#">CrowdSignals</a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-left">
-          <li><a href="#/search">Search</a></li>
-          <li><a href="#/map">Map</a></li>
-          <li><a href="#/graph">Graph</a></li>
-        </ul>
+      <div ng-show="loggedIn">
+        <div class="collapse navbar-collapse" id="myNavbar" >
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#/search">Search</a></li>
+            <li><a href="#/map">Map</a></li>
+            <li><a href="#/graph">Graph</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="" ng-click="logout()">Logout</a></li>
+          </ul>
+        </div>
       </div>
   </nav>
   <!--[if lt IE 7]>
@@ -75,6 +80,7 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
   <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
   <script src='/bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
   <script src='/bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
@@ -83,7 +89,9 @@
   <script src="app.js"></script>
   <script src="services/services.js"></script>
   <script src="services/locationService.js"></script>
-  <script src="services/ApiService.js"></script>
+  <script src="services/authenticationService.js"></script>
+  <script src="services/authenticationInterceptor.js"></script>
+  <script src="services/apiService.js"></script>
   <script src="mapView/mapView.js"></script>
   <script src="graphView/graphView.js"></script>
   <script src="searchView/searchView.js"></script>
