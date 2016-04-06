@@ -32,7 +32,6 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
 	$scope.onClick = function(marker, eventName, model)
 	{
 		model.show = !model.show;
-		console.log('clicked!' + model.id);
 	};
 
     $scope.circleFilter=
@@ -58,9 +57,12 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         };
 
     $scope.markers=[];
+    $scope.selectApps=[];
     $scope.createMarkers=function()
     {
         $scope.prototypeMarkers=[];
+        var tempApps = ['Reddit', 'Snapchat', 'Chrome', 'Facebook', 'Flickr'];
+
         console.log()
         var counter=0;
         for (var i = $scope.data.length - 1; i >= 0; i--) {
@@ -68,13 +70,18 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         	for (var j = data.longitude.length - 1; j >= 0; j--) {
 	        	var marker={};
 	            marker.id=counter++;
+                marker.apps= tempApps[parseInt(Math.random() * (tempApps.length))];
 	            marker.latitude=  data.latitude[j];
 	            marker.longitude= data.longitude[j];
                 marker.provider=data.provider[j];
-                marker.time=new Date(data.timestamps[j]);
+                marker.time=new Date(data.timestamps[j]/1000000);
                 marker.speed=data.speed.slice();
                 marker.options={};
-                marker.options.label={labelContent:'data',labelVisible:true}
+                marker.options.label={labelContent:'data',labelVisible: true}
+                if($scope.selectApps.indexOf(marker.apps) == -1)
+                    {
+                        $scope.selectApps.push(marker.apps);
+                    }
 	            $scope.prototypeMarkers.push(marker);            
         	}
         }
@@ -108,26 +115,38 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
                 $scope.averageSpeed+=speed;
                 speedCount++;
             });
-            marker.apps=['Reddit', 'Snapchat', 'Chrome', 'Facebook', 'Flickr'];
             marker.show=false;
             return marker;
         });
         $scope.averageSpeed/=speedCount;
     }
 
-    $scope.list= function(x, y)
+    $scope.userFilter=function(filterID)
     {
-    	$scope.markers=$scope.prototypeMarkers.filter((marker)=>
-    	{
-    		return (marker.id > x && marker.id < y);
-    	});
+        $scope.markers=$scope.prototypeMarkers.filter((marker)=>
+        {
+            return marker.id == filterID;
+        });
 
-    	$scope.markers.map((marker)=>
-    	{
-    		marker.app = 'test';
-    		marker.show = false;
-    		return marker;
-    	});
-    };
+        $scope.markers.map((marker)=>
+        {
+            marker.show=false;
+            return marker;
+        });
+    }
+
+    $scope.appFilter=function(name)
+    {
+        $scope.markers=$scope.prototypeMarkers.filter((marker)=>
+        {
+            return name== marker.apps;
+        });
+
+        $scope.markers.map((marker)=>
+        {
+            marker.show=false;
+            return marker;
+        });
+    }
 }]);
 

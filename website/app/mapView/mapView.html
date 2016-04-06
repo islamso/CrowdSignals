@@ -28,8 +28,8 @@
                                 Users<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.users, 'glyphicon-chevron-right': !status.users}"></i>
                                 </uib-accordion-heading>
                                 <uib-accordion-body>
-                                    <div class="col-xs-7"><input type="text" class="form-control" placeholder="Enter User ID here (e.g. 4114673):"></input>
-                                    <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span></div>
+                                    <div class="col-xs-7"><input type="text" ng-model="filter.user" class="form-control" placeholder="Enter User ID here (e.g. 4114673):"></input>
+                                    <button class="btn btn-success" type="button" ng-click="userFilter(filter.user)">Filter</button></div>
                                 </uib-accordion-body>
                             </uib-accordion-group>
                             <uib-accordion-group is-open="">
@@ -37,15 +37,10 @@
                                     Application<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.custom, 'glyphicon-chevron-right': !status.custom}"></i>
                                 </uib-accordion-heading>
                                 <uib-accordion-body>
-                                    <select class="form-control">
-                                        <option value="app1">App1</option>
-                                        <option value="app2">App2</option>
-                                        <option value="app3">App3</option>
-                                        <option value="app4">App4</option>
-                                        <option value="app5">App5</option>
-                                        <option value="app6">App6</option>
+                                    <select class="form-control" ng-model="selectedApp">
+                                        <option ng-repeat="app in selectApps track by $index" value="{{app}}">{{app}}</option>
                                     </select>
-                                    <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span>
+                                    <button class="btn btn-success" type="button" ng-disabled="applicationForm.$invalid || applicationForm.selectedApp == '-None-'" ng-click="appFilter(selectedApp)">Filter</button>
                                 </uib-accordion-body>
                             </uib-accordion-group>
                             <uib-accordion-group is-open="">
@@ -55,15 +50,15 @@
                                 <uib-accordion-body>
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic addon">X</span>
-                                    <input type="text" class="form-control" placeholder="X Coord:"></input>
+                                    <input type="number" ng-model="circleFilter.center.latitude" class="form-control" placeholder="X Coord:"></input>
 
                                     <span class="input-group-addon" id="basic addon">Y</span>
-                                    <input type="text" class="form-control" placeholder="Y Coord:"></input>
+                                    <input type="number" ng-model="circleFilter.center.longitude" class="form-control" placeholder="Y Coord:"></input>
 
                                     <span class="input-group-addon" id="basic addon">Radius</span>
-                                    <input type="text" class="form-control" placeholder="Enter Radius here"></input>
+                                    <input type="number" ng-model="circleFilter.radius" class="form-control" placeholder="Radius:"></input>
                                 </div>
-                                <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span>
+                                <button class="btn btn-success" type="button" ng-click="refresh()">Filter</button>
                                 </uib-accordion-body>
                             </uib-accordion-group>
                             <uib-accordion-group is-open="status.date">
@@ -76,15 +71,15 @@
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <label for="from-date" control-label>From Time:</label>
-                                                    <input type="datetime-local" class='form-control' id='from-date'></input>
+                                                    <input type="date" class='form-control' ng-model='fromDate' id='from-date'></input>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <label for="to-date" control-label>To Time:</label>
-                                                    <input type="datetime-local" class='form-control' id='to-date'></input></div>
+                                                    <input type="date" class='form-control' ng-model='toDate' id='to-date'></input></div>
                                             </div>
-                                            <span class="input-group-btn"><button class="btn btn-success input-group-addon" type="button" id="button addon">Filter</button></span>
+                                            <button class="btn btn-success" type="button" id="">Filter</button>
                                         </div> 
                                     </form>
                                 </uib-accordion-body>
@@ -120,7 +115,7 @@
             </ui-gmap-circle>
 
         <ui-gmap-markers 
-            models="markers" 
+            models="markers"
             coords="'self'" 
             icon="'icon'">
 
