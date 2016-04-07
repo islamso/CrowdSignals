@@ -18,14 +18,14 @@
 					                Location
 					              </label>
 								</div>
-								<div class="radio">
+								<!-- <div class="radio">
 									<label>
 					                	<input type="radio" name="dataset-input" ng-model='dataset' value="battery" checked="">
 					                	<span class="circle"></span>
 					                	<span class="check"></span>
 					                Battery
 					              </label>
-								</div>
+								</div> -->
 							</div>
 						</div>
 
@@ -33,7 +33,7 @@
 						<div class="form-group">
 							<h5>Users</h3>
 							<label for="testInput" class="control-label col-sm-1">Max No.</label>
-							<div class="col-sm-6"><input type="number" class="form-control" id="testInput"></div>
+							<div class="col-sm-6"><input type="number" class="form-control" id="testInput"ng-model="maxUsers"></div>
 						</div>
 						
 						<!-- Date -->
@@ -47,8 +47,8 @@
 							<div class="col-sm-6"><input type="date" class="form-control" id="until-date" ng-model="untilDate"></div>
 						</div>
 					</div>
-					<button ng-show="dataset == 'location'" ng-disabled="searchForm.$invalid" class="btn btn-raised btn-primary" ng-click="change()">Map</button>
-					<a href="" ng-show="dataset == 'battery'" ng-disabled="searchForm.$invalid" class="btn btn-raised btn-primary" ng-click="graph()">Graph</a>
+					<button ng-show="dataset == 'location'" ng-disabled="searchForm.$invalid" class="btn btn-raised btn-primary" ng-click="map()">Map</button>
+<!-- 					<a href="" ng-show="dataset == 'battery'" ng-disabled="searchForm.$invalid" class="btn btn-raised btn-primary" ng-click="graph()">Graph</a> -->
 				</fieldset>
 			</form>
 			<!-- .form-horizontal -->

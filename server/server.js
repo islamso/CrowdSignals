@@ -21,7 +21,7 @@ app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('json spaces',4)
-app.use(express.static('../website/app'));
+app.use(express.static('./website/app'));
 
 
 app.use(routes);

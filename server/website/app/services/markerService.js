@@ -6,6 +6,7 @@ angular.module('myApp.services')
 	this.parse=parse;
 	this.filter.location=filterLocation;
 	this.filter.user=filterUser;
+	this.filter.app=appFilter;
 	this.stat.speed=statSpeed;
 	/**
 	 * MarkerService.parse
@@ -73,21 +74,29 @@ angular.module('myApp.services')
 	 */
 	function filterLocation(markers, coords, threshold)
 	{
-		threshold = threshold || 0;
 		
 		//markers is a single object
 		if(markers.length == undefined)
 		{
-			return (LocationService.distance(markers, coords)*100000 <  threshold);
+			return LocationService.withinRadius(markers, coords, threshold);
 		}
 
 		//markers is an array	
 		return markers.filter(function(marker)
 		{
-        	return (LocationService.distance(marker, coords)*100000 <  threshold)
+        	return LocationService.withinRadius(marker, coords, threshold);
 		});
 	}
 
+	/**
+	 * MarkerService.filter.location 
+	 * @return
+	 * 	filtered marker array by location with latitude and longitude properties
+	 * @params
+	 * markers -  single marker or an array of markers
+	 * coords - Object with latitude and longitude properties
+	 * threshold - max threshold distance from specified location
+	 */
 	function filterUser(markers, userId)
 	{
 		console.log(userId)
@@ -95,6 +104,55 @@ angular.module('myApp.services')
         {
         	console.log(marker.userId)
             return marker.userId == userId;
+        });
+	}
+
+	/**
+	 * MarkerService.filter.location 
+	 * @return
+	 * 	filtered marker array by app
+	 * @params
+	 * markers -  single marker or an array of markers, with marker app property
+	 * appName - Single/Array Name of the app to filter
+	 * threshold - max threshold distance from specified location
+	 */
+	function appFilter(markers, appName)
+	{
+		if(appName.length == undefined)
+		{
+			return markers.filter(function(marker)
+	        {
+	            return markers.app==appName;
+	        });
+		}
+
+        return markers.filter(function(marker)
+        {
+            return appName.indexOf(marker.app)!=-1;
+        });
+	}
+
+
+	/**
+	 * MarkerService.filter.date 
+	 * @return
+	 * 	filtered marker array by date
+	 * @params
+	 * markers -  an array of markers, with marker app property
+	 * fromDate - begin Date Object
+	 * untilDate - end Date Object
+	 */
+	function dateFilter(markers,fromDate, untilDate)
+	{
+		fromDate= fromDate || 0;
+		untilDate= untilDate || 0; 
+
+		fromDate=(fromDate==0)?0:fromDate.getTime()*1000000
+		untilDate=(untilDate==0)?0:untilDate.getTime()*1000000
+		
+		return markers.filter(function(marker)
+        {
+            return (marker.start >  fromDate) && (marker.end < untilDate);
         });
 	}
 
@@ -115,7 +173,4 @@ angular.module('myApp.services')
 		}
 		return speed/count;
 	}
-
-
-	return this;
 }]);

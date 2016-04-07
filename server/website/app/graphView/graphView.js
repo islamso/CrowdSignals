@@ -1,12 +1,11 @@
 'use strict';
 
 angular.module('myApp.graphView', ['ngRoute','chart.js'])
-
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/graph', {
-    templateUrl: 'graphView/graphView.html',
-    controller: 'GraphViewController'
-  });
+  // $routeProvider.when('/graph', {
+  //   templateUrl: 'graphView/graphView.html',
+  //   controller: 'GraphViewController'
+  // });
 }])
 
 .controller('GraphViewController', ['$scope',function($scope) {

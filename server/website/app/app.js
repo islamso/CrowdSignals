@@ -38,4 +38,4 @@ angular.module('myApp', [
     }
   });
 }])
-.constant('ApiUrl','http://crowdsignals.eu-1.evennode.com')
+.constant('ApiUrl','')
