@@ -1,7 +1,9 @@
 'use strict';
 
+//Angular module for the map view
 angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
 
+//Config for the route providers when navigating the website
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/map', {
 		templateUrl: 'mapView/mapView.html',
@@ -13,6 +15,8 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         controller: 'MapViewController'
     });
 }])
+
+//Main controller for the map view
 .controller('MapViewController', ['$scope','ApiService','LocationService','MarkerService','$routeParams',function($scope,ApiService,LocationService,MarkerService,$routeParams) {
     $scope.markers=[];
     $scope.prototypeMarkers=[];
@@ -21,21 +25,29 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
 
     console.log($routeParams);
 
+    //Creates a markerWindow
     $scope.markerWindow={
         show:false,
         coords:{latitude:0, longitude:0}
     };
+
+    //Pulls the locations from the server and binds them to the scope
 	ApiService.getLocations().success(function(data)
 		{
 				$scope.data=data;
 				$scope.createMarkers();
 		});
+
+    //Status of the accordion panel tabs
     $scope.status={
         users:false,
         date:false,
         custom:false
     }
-    $scope.bounds={};
+
+    $scope.bounds={};       //Used for imposing limits on the map (if needed)
+
+    //Map settings such as the loaded centre point and giving a value to bounds
 	$scope.settings = {
 
 		map: { center: { latitude: 47.609722, longitude: -122.333056}, zoom: 10 },
@@ -45,13 +57,13 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         }
 	};
 
-	$scope.onClick = function(marker, eventName, model)
-	{
-		model.show = !model.show;
-	};
-
+    //General attributes for the circle filter such as centre, colour, and radius
     $scope.circleFilter= {id: 1234, center:{ latitude: 47.609722, longitude: -122.333056}, radius: 5000, stroke: {color: '#08B21F', weight: 2, opacity: 1 }, fill: {color: '#08B21F', opacity: 0.5 }, geodesic: true, draggable: true,clickable: true,editable: true,visible: false, control: {} }; $scope.markers=[];
+    
+    //Array of apps to throw into application filter select tag
     $scope.selectApps=[];
+
+    //Creates the markers from the location data using the services
     $scope.createMarkers=function()
     {
         $scope.prototypeMarkers=MarkerService.parse($scope.data);
@@ -59,7 +71,7 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
     }
 
 
-
+    //Refreshes the markers on the view with respect to the circle filter
     $scope.refresh=function()
     {
         $scope.markers=$scope.prototypeMarkers;
@@ -70,11 +82,14 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         $scope.averageSpeed=MarkerService.stat.speed($scope.markers);
     }
 
+
+    //Filters the markers on the screen depending on their ID
     $scope.userFilter=function(userId)
     {
         $scope.markers=MarkerService.filter.user($scope.markers, userId)
     }
 
+    //Filters the markers on the screen depending on which app they're using
     $scope.appFilter=function(name)
     {
         $scope.markers=$scope.prototypeMarkers.filter((marker)=>
@@ -90,12 +105,15 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
 
     };
 
+    //toggles the visibility of the circle filter
     $scope.showCircle=function()
     {
         $scope.circleFilter.visible=!$scope.circleFilter.visible;
         $scope.circleFilter.center=angular.copy($scope.settings.map.center);
 
     }
+
+    //Toggles the visibility of the marker infoWindow
     $scope.onClick=function(marker,event,model)
     {
         $scope.markerWindow.show=true;
@@ -105,6 +123,7 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         console.log($scope.markerWindow.model.apps)
     }
 
+    //What happens when the window is closed
     $scope.onClose=function(marker,event,model)
     {
         $scope.markerWindow.show=false;
