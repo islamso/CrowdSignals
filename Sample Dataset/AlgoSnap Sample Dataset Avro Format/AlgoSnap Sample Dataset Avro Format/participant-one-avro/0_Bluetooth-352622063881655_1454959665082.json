@@ -1,4 +1,0 @@
-[
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "bluetooth", "start": 1454959575000000000, "end": 1454959605000000000, "address": ["C8:BC:C8:B3:9F:7B", "40:83:DE:12:60:4C", "40:83:DE:38:8B:88", "40:83:DE:12:48:D4", "40:83:DE:78:42:54"], "name": ["MacBook Pro", "null", "null", "null", "null"], "rssi": [-91, -88, -98, -90, -94], "timestamps": [1454959578508000000, 1454959581808000000, 1454959581898000000, 1454959584806000000, 1454959587209000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "bluetooth", "start": 1454959695000000000, "end": 1454959725000000000, "address": ["40:83:DE:38:1B:2F"], "name": ["null"], "rssi": [-96], "timestamps": [1454959699321000000]}
-]

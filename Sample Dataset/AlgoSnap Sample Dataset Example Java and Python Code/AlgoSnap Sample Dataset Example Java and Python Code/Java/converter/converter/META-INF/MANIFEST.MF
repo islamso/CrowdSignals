@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Rsrc-Class-Path: ./ avro-1.7.4.jar jackson-core-asl-1.9.12.jar jackson
- -mapper-asl-1.9.12.jar
-Class-Path: .
-Rsrc-Main-Class: com.algosnap.crowdsignals.data.Transformer
-Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
-

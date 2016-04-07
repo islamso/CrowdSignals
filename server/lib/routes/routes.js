@@ -85,9 +85,7 @@ Router.post('/login',function(req,res)
 					let claim={
 						username: req.body.username
 					}
-					let token=jwt.sign(claim, database.secret,{expiresIn:'60m'});
-					console.log(jwt.verify(token, database.secret));
-
+					let token=jwt.sign(claim, database.secret, {algorithm:'RS256',expiresIn:'60m'});
 					res.json({'token':token});
 				}
 				else

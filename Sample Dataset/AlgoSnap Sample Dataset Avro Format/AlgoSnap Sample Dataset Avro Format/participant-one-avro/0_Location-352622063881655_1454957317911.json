@@ -1,3 +1,0 @@
-[
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "location", "start": 1454957318561000000, "end": 1454957318561000000, "latitude": [47.54592], "longitude": [-122.05954], "accuracy": [75.0], "speed": [0.36069378], "bearing": [16.2], "provider": ["gps"], "isPassive": [true], "timestamps": [1454957318561000000]}
-]

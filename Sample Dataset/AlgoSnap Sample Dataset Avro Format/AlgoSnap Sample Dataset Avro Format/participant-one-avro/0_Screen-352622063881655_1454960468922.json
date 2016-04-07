@@ -1,4 +1,0 @@
-[
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454960468920000000, "end": 1454960468920000000, "status": ["SCREEN_ON"], "timestamps": [1454960468920000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454960477298000000, "end": 1454960477298000000, "status": ["SCREEN_OFF"], "timestamps": [1454960477298000000]}
-]

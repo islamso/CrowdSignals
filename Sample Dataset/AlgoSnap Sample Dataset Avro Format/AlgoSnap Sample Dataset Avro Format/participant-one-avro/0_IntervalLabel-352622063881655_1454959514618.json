@@ -1,4 +1,0 @@
-[
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "interval_label", "start": 1454959337198000000, "end": 1454959514616000000, "label": ["Walking"], "label_start": [1454959337198000000], "label_end": [1454959514616000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "interval_label", "start": 1454959529477000000, "end": 1454959580778000000, "label": ["Washing Hands"], "label_start": [1454959529477000000], "label_end": [1454959580778000000]}
-]

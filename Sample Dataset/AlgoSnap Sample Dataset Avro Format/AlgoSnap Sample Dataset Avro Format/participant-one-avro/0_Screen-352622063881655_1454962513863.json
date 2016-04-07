@@ -1,8 +1,0 @@
-[
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454962513861000000, "end": 1454962513861000000, "status": ["SCREEN_ON"], "timestamps": [1454962513861000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454962519734000000, "end": 1454962519734000000, "status": ["SCREEN_OFF"], "timestamps": [1454962519734000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454962551972000000, "end": 1454962551972000000, "status": ["SCREEN_ON"], "timestamps": [1454962551972000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454962553830000000, "end": 1454962553830000000, "status": ["SCREEN_OFF"], "timestamps": [1454962553830000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454962572070000000, "end": 1454962572070000000, "status": ["SCREEN_ON"], "timestamps": [1454962572070000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "screen", "start": 1454962583577000000, "end": 1454962583577000000, "status": ["SCREEN_OFF"], "timestamps": [1454962583577000000]}
-]

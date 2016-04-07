@@ -1,4 +1,0 @@
-[
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "bluetooth", "start": 1454958255000000000, "end": 1454958285000000000, "address": ["FC:19:10:B7:4B:E5"], "name": ["Chad Charbonneau (Gala"], "rssi": [-103], "timestamps": [1454958266098000000]},
-{"user_id": 0, "sw_name": "crowdsignals.algosnap.com", "sw_version": "1.0(1)", "device_id": "352622063881655", "device_type": "smartphone", "timezone": -8, "type": "bluetooth", "start": 1454958375000000000, "end": 1454958405000000000, "address": ["FC:19:10:B7:4B:E5"], "name": ["Chad Charbonneau (Gala"], "rssi": [-106], "timestamps": [1454958384124000000]}
-]
