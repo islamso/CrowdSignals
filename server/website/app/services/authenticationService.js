@@ -1,6 +1,20 @@
 angular.module('myApp.services')
 .service('AuthenticationService',['$http','$q','$window','jwtHelper','ApiUrl',function($http,$q,$window,jwtHelper,ApiUrl)
 {
+
+    /**
+     * AuthenticationService.login
+     * @return
+     *  Promise, 
+     *  resolves when server returns token and 200 status
+     *  rejects when bad status code returns i.e login fails
+     * @params
+     *  data:Object
+     *  {
+     *      username: String,
+     *      password: String
+     *  }
+     */
     this.login=function(data)
     {
     	return $q(function(resolve,reject)
@@ -20,6 +34,11 @@ angular.module('myApp.services')
 
     };
 
+    /**
+     * AuthenticationService.logout
+     * @return
+     *  nothing, logs user out
+     */
     this.logout=function()
     {
 		if($window.localStorage.token)
@@ -28,6 +47,11 @@ angular.module('myApp.services')
 		}
     };
 
+    /**
+     * AuthenticationService.isLoggedIn
+     * @return
+     *  returns whether user is logged in
+     */
     this.isLoggedIn=function()
     {
     	var token=$window.localStorage.getItem('token');

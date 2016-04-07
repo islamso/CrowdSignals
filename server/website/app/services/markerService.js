@@ -8,6 +8,7 @@ angular.module('myApp.services')
 	this.filter.user=filterUser;
 	this.filter.app=appFilter;
 	this.stat.speed=statSpeed;
+	
 	/**
 	 * MarkerService.parse
 	 * @return
