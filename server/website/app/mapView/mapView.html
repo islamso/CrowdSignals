@@ -1,6 +1,7 @@
 <div class="navbar-overlap"></div>
 <div class="col-sm-4">
     <uib-tabset active='0'>
+        <!-- Statistics panel -->
             <uib-tab index="0" heading="Statistics">
                 <ul class="list-group">
                     <li class="list-group-item">
@@ -11,11 +12,14 @@
                     </li>
                 </ul>
             </uib-tab>
+            <!-- Filtering Panel -->
             <uib-tab index="1" heading="Filtering">
                 <br>
+                <!-- Filtering selection -->
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <uib-accordion>                    
+                        <uib-accordion>
+                            <!-- Custom circle filtering -->   
                             <uib-accordion-group is-open="status.custom">
                                 <uib-accordion-heading>
                                 Custom<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.custom, 'glyphicon-chevron-right': !status.custom}"></i>
@@ -23,6 +27,8 @@
                                 <button class='btn btn-success' ng-click='showCircle()'>Show Filter</button>
                                 <button class='btn btn-success' ng-click='refresh()'>Refresh</button>
                             </uib-accordion-group>
+
+                            <!-- filter by user id -->
                             <uib-accordion-group is-open="status.users">
                                 <uib-accordion-heading>
                                 Users<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.users, 'glyphicon-chevron-right': !status.users}"></i>
@@ -43,6 +49,8 @@
                                     <button class="btn btn-success" type="button" ng-disabled="applicationForm.$invalid || applicationForm.selectedApp == '-None-'" ng-click="appFilter(selectedApp)">Filter</button>
                                 </uib-accordion-body>
                             </uib-accordion-group> -->
+
+                            <!-- filter by location -->
                             <uib-accordion-group is-open="">
                                 <uib-accordion-heading>
                                     Location<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.custom, 'glyphicon-chevron-right': !status.custom}"></i>
@@ -60,6 +68,8 @@
                                 </div>
                                 <button class="btn btn-success" type="button" ng-click="refresh()">Filter</button>
                                 </uib-accordion-body>
+
+                            <!-- filter by date -->
                             </uib-accordion-group>
                             <uib-accordion-group is-open="status.date">
                                 <uib-accordion-heading>
@@ -85,23 +95,17 @@
                                 </uib-accordion-body>
                             </uib-accordion-group>
                         </uib-accordion>
-                        <ul class="list-group">
-                          <!-- <li class="list-group-item"><button class='btn btn-success' ng-click='circleFilter.visible=!circleFilter.visible'>Show Filtering Circle</button></li>
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(0, 9)'>List 0-9</button></li>
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(10, 19)'>List 10-19</button></li>
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(20, 29)'>List 20-29</button></li>
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(30, 39)'>List 30-39</button></li>
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(40, 49)'>List 40-49</button></li>
-                          <li class="list-group-item"><button class='btn btn-success' ng-click='list(50, 59)'>List 50-59</button></li> -->
-                        </ul>
                     </div>
                 </div>
             </uib-tab>
     </uib-tabset>
 </div>
+
+<!-- section where the map is drawn -->
 <div class="col-sm-8" style="padding:0px;">
     <ui-gmap-google-map center='settings.map.center' zoom='settings.map.zoom' bounds='settings.bounds'>
 
+        <!-- draws the circle filter -->
         <ui-gmap-circle
             visible='circleFilter.visible'
             center='circleFilter.center'
@@ -114,6 +118,7 @@
             >
             </ui-gmap-circle>
 
+        <!-- draws the markers on the screen -->
         <ui-gmap-markers 
             models="markers"
             coords="'self'" 
@@ -122,6 +127,7 @@
             close="onClose">
         </ui-gmap-markers>
 
+        <!-- gives the markers info windows -->
         <ui-gmap-window ng-if="markerWindow" show="markerWindow.show" coords="markerWindow.coords">
             <div>
                 <ul class="list-group">
