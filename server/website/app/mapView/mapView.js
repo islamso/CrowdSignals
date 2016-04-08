@@ -83,6 +83,11 @@ angular.module('myApp.mapView', ['ngRoute','uiGmapgoogle-maps'])
         {
             $scope.markers=MarkerService.filter.location($scope.prototypeMarkers, $scope.circleFilter.center, $scope.circleFilter.radius);
         }   
+        
+        if($scope.circleFilter.visible)
+        {
+            $scope.markers=MarkerService.filter.location($scope.prototypeMarkers, $scope.circleFilter.center, $scope.circleFilter.radius);
+        }  
 
         $scope.averageSpeed=MarkerService.stat.speed($scope.markers);
     }

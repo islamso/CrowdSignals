@@ -1,16 +1,14 @@
 'use strict';
 
-angular.module('myApp.loginView', ['ngRoute'])
+angular.module('myApp.registerView', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/login', {
-    templateUrl: 'loginView/loginView.html',
-    controller: 'LoginViewController'
+  $routeProvider.when('/register', {
+    templateUrl: 'register/registerView.html',
+    controller: 'RegisterViewController'
   });
 }])
-.controller('LoginViewController', ['$scope','AuthenticationService','$location','$timeout',function($scope,AuthenticationService,$location,$timeout) {
-	
-	//Login Method	
+.controller('RegisterViewController', ['$scope','AuthenticationService','$location','$timeout',function($scope,AuthenticationService,$location,$timeout) {
 	$scope.login=function()
 	{
 		function success(data){

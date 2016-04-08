@@ -12,11 +12,13 @@ angular.module('myApp', [
   'myApp.searchView',
   'myApp.loginView'
 ])
+//Configutartion of main module
 .config(['$routeProvider','$httpProvider',function($routeProvider,$httpProvider) {
   $routeProvider.otherwise({redirectTo: '/search'});
   //$httpProvider.defaults.withCredentials = true;
   $httpProvider.interceptors.push('AuthenticationInterceptor');
 }])
+//Method to run on initialisation of myApp
 .run(['$rootScope','$location','AuthenticationService',function($rootScope,$location,AuthenticationService) {
   $rootScope.loggedIn=true;
   $rootScope.logout=function()

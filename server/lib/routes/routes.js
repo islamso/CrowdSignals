@@ -42,7 +42,7 @@ Router.all('/api/*',function(req,res,next)
 	next();
 });
 
-/*----------  User Route Handling  ----------*/
+/*----------  Register Route Handler  ----------*/
 
 Router.post('/register',function(req,res)
 {
@@ -61,7 +61,6 @@ Router.post('/register',function(req,res)
 			if(err.code === 11000){
 				res.status(400).send('username already taken!');
 			}
-			//res.json({'error':'Something bad happened try again!'});
 		}
 		else
 		{
@@ -69,6 +68,8 @@ Router.post('/register',function(req,res)
 		}
 	});
 });
+
+/*----------  Login Route Handler  ----------*/
 
 Router.post('/login',function(req,res)
 {

@@ -1,8 +1,12 @@
 'use strict';
 
+/*----------  Schematic Models for DB  ----------*/
+
 let AppUsageModel=require('../models/appusage-model.js'),
 	LocationModel=require('../models/location-model.js'),
 	BatteryModel=require('../models/battery-model.js');
+
+/*----------  Configuration of Node-Restful resources  ----------*/
 
 function setup(app)
 {

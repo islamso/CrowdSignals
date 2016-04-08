@@ -17,10 +17,7 @@
     "jsonwebtoken": "^5.7.0",
     "mongoose": "^4.4.8",
     "morgan": "^1.7.0",
-    "mysql": "^2.10.2",
     "node-restful": "^0.2.5",
-    "passport": "^0.3.2",
-    "passport-http": "^0.3.0",
     "path": "^0.12.7"
   }
 }

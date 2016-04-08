@@ -1,13 +1,12 @@
 'use strict';
 
-const passport=require('passport');
-const mongoose=require('node-restful').mongoose;
-const express=require('express');
-const routes=require('./lib/routes/routes.js');
-const api=require('./lib/routes/api.js');
-const app=express();
-const data=require('./lib/config/database.js');
-const morgan=require('morgan'),
+const mongoose=require('node-restful').mongoose,
+	  express=require('express'),
+	  routes=require('./lib/routes/routes.js'),
+	  api=require('./lib/routes/api.js'),
+	  app=express(),
+	  data=require('./lib/config/database.js'),
+	  morgan=require('morgan'),
 	  bodyParser=require('body-parser'),
 	  sessions=require('client-sessions'),
 	  helmet=require('helmet'),
